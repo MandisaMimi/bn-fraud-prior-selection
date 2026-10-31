@@ -1,0 +1,10 @@
+estimator,metric,100,500,2000,5000,20000,50000
+Jeffreys,kl,B,B,B,B,B,B
+Jeffreys,f1,.,.,W,W,.,.
+Jeffreys,auroc,.,.,.,.,.,B
+Laplace,kl,B,B,B,B,B,B
+Laplace,f1,.,.,W,W,.,.
+Laplace,auroc,.,.,.,.,.,.
+FP_s50,kl,B,B,B,B,B,B
+FP_s50,f1,B,B,.,.,.,.
+FP_s50,auroc,.,.,.,B,B,B

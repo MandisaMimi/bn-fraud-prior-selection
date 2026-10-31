@@ -1,0 +1,14 @@
+\begin{tabular}{lcccccc}\toprule
+ & \multicolumn{2}{c}{$n=2,000$} & \multicolumn{2}{c}{$n=20,000$} & \multicolumn{2}{c}{$n=50,000$}\\
+ & AUROC & F1 & AUROC & F1 & AUROC & F1\\\midrule
+BN, true structure + fraud prior & 0.700 & 0.061 & 0.855 & 0.080 & 0.871 & 0.081\\
+BN, learned structure (Hill Climbing + BIC) & 0.518 & 0.012 & 0.601 & 0.020 & 0.695 & 0.032\\
+\midrule
+Logistic regression & 0.596 & 0.020 & 0.683 & 0.033 & 0.697 & 0.038\\
+Linear SVM & 0.590 & 0.019 & 0.679 & 0.033 & 0.695 & 0.038\\
+Decision tree & 0.525 & 0.023 & 0.567 & 0.041 & 0.582 & 0.043\\
+Random forest & 0.590 & 0.022 & 0.701 & 0.043 & 0.738 & 0.048\\
+Neural network & 0.591 & 0.019 & 0.708 & 0.038 & 0.785 & 0.053\\
+Naive Bayes & 0.598 & 0.019 & 0.683 & 0.033 & 0.697 & 0.037\\
+\midrule Best possible (true model) & 0.888 & 0.082 & 0.888 & 0.082 & 0.888 & 0.082\\
+\bottomrule\end{tabular}

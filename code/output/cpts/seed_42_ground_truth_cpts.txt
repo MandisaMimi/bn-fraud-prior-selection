@@ -1,0 +1,551 @@
+GROUND-TRUTH BAYESIAN NETWORK -- FULL CONDITIONAL PROBABILITY TABLES (seed 42)
+==============================================================================
+
+Node: type  (states: 5)
+Parents: (none -- root node)
+------------------------------------------------------------------------------
+  P(type=0)=0.1293  P(type=1)=0.1408  P(type=2)=0.2787  P(type=3)=0.4033  P(type=4)=0.0478
+
+Node: oldbalanceOrg  (states: 5)
+Parents: (none -- root node)
+------------------------------------------------------------------------------
+  P(oldbalanceOrg=0)=0.1650  P(oldbalanceOrg=1)=0.2933  P(oldbalanceOrg=2)=0.0605  P(oldbalanceOrg=3)=0.0899  P(oldbalanceOrg=4)=0.3912
+
+Node: oldbalanceDest  (states: 5)
+Parents: (none -- root node)
+------------------------------------------------------------------------------
+  P(oldbalanceDest=0)=0.2528  P(oldbalanceDest=1)=0.2866  P(oldbalanceDest=2)=0.1926  P(oldbalanceDest=3)=0.2435  P(oldbalanceDest=4)=0.0245
+
+Node: amount  (states: 5)
+Parents: type
+------------------------------------------------------------------------------
+  type=0                                   -> P(amount=0)=0.0541  P(amount=1)=0.3151  P(amount=2)=0.0897  P(amount=3)=0.2342  P(amount=4)=0.3069
+  type=1                                   -> P(amount=0)=0.0598  P(amount=1)=0.1205  P(amount=2)=0.2542  P(amount=3)=0.3977  P(amount=4)=0.1678
+  type=2                                   -> P(amount=0)=0.2899  P(amount=1)=0.1574  P(amount=2)=0.1478  P(amount=3)=0.2743  P(amount=4)=0.1307
+  type=3                                   -> P(amount=0)=0.4081  P(amount=1)=0.0342  P(amount=2)=0.1583  P(amount=3)=0.2459  P(amount=4)=0.1535
+  type=4                                   -> P(amount=0)=0.1024  P(amount=1)=0.1327  P(amount=2)=0.3334  P(amount=3)=0.1450  P(amount=4)=0.2865
+
+Node: newbalanceOrig  (states: 5)
+Parents: amount, oldbalanceDest, oldbalanceOrg
+------------------------------------------------------------------------------
+  amount=0, oldbalanceDest=0, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.1942  P(newbalanceOrig=1)=0.1111  P(newbalanceOrig=2)=0.1565  P(newbalanceOrig=3)=0.0878  P(newbalanceOrig=4)=0.4503
+  amount=0, oldbalanceDest=0, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.3968  P(newbalanceOrig=1)=0.0768  P(newbalanceOrig=2)=0.1513  P(newbalanceOrig=3)=0.1548  P(newbalanceOrig=4)=0.2203
+  amount=0, oldbalanceDest=0, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1279  P(newbalanceOrig=1)=0.1756  P(newbalanceOrig=2)=0.4703  P(newbalanceOrig=3)=0.0708  P(newbalanceOrig=4)=0.1553
+  amount=0, oldbalanceDest=0, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.1108  P(newbalanceOrig=1)=0.3117  P(newbalanceOrig=2)=0.1792  P(newbalanceOrig=3)=0.1830  P(newbalanceOrig=4)=0.2154
+  amount=0, oldbalanceDest=0, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1900  P(newbalanceOrig=1)=0.2570  P(newbalanceOrig=2)=0.2139  P(newbalanceOrig=3)=0.1236  P(newbalanceOrig=4)=0.2156
+  amount=0, oldbalanceDest=1, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.3052  P(newbalanceOrig=1)=0.2546  P(newbalanceOrig=2)=0.0548  P(newbalanceOrig=3)=0.2339  P(newbalanceOrig=4)=0.1515
+  amount=0, oldbalanceDest=1, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.2454  P(newbalanceOrig=1)=0.1383  P(newbalanceOrig=2)=0.2186  P(newbalanceOrig=3)=0.1739  P(newbalanceOrig=4)=0.2239
+  amount=0, oldbalanceDest=1, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.5474  P(newbalanceOrig=1)=0.1565  P(newbalanceOrig=2)=0.0496  P(newbalanceOrig=3)=0.1718  P(newbalanceOrig=4)=0.0746
+  amount=0, oldbalanceDest=1, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.3060  P(newbalanceOrig=1)=0.0413  P(newbalanceOrig=2)=0.2404  P(newbalanceOrig=3)=0.2715  P(newbalanceOrig=4)=0.1408
+  amount=0, oldbalanceDest=1, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2109  P(newbalanceOrig=1)=0.1885  P(newbalanceOrig=2)=0.4330  P(newbalanceOrig=3)=0.0832  P(newbalanceOrig=4)=0.0845
+  amount=0, oldbalanceDest=2, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2697  P(newbalanceOrig=1)=0.3612  P(newbalanceOrig=2)=0.1963  P(newbalanceOrig=3)=0.1577  P(newbalanceOrig=4)=0.0151
+  amount=0, oldbalanceDest=2, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.2310  P(newbalanceOrig=1)=0.4518  P(newbalanceOrig=2)=0.1074  P(newbalanceOrig=3)=0.1138  P(newbalanceOrig=4)=0.0960
+  amount=0, oldbalanceDest=2, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.2081  P(newbalanceOrig=1)=0.4651  P(newbalanceOrig=2)=0.2394  P(newbalanceOrig=3)=0.0373  P(newbalanceOrig=4)=0.0501
+  amount=0, oldbalanceDest=2, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.3307  P(newbalanceOrig=1)=0.2430  P(newbalanceOrig=2)=0.1649  P(newbalanceOrig=3)=0.1029  P(newbalanceOrig=4)=0.1585
+  amount=0, oldbalanceDest=2, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1519  P(newbalanceOrig=1)=0.3272  P(newbalanceOrig=2)=0.0244  P(newbalanceOrig=3)=0.2913  P(newbalanceOrig=4)=0.2052
+  amount=0, oldbalanceDest=3, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2244  P(newbalanceOrig=1)=0.4497  P(newbalanceOrig=2)=0.0815  P(newbalanceOrig=3)=0.1415  P(newbalanceOrig=4)=0.1029
+  amount=0, oldbalanceDest=3, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.1407  P(newbalanceOrig=1)=0.1625  P(newbalanceOrig=2)=0.1955  P(newbalanceOrig=3)=0.2974  P(newbalanceOrig=4)=0.2039
+  amount=0, oldbalanceDest=3, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1127  P(newbalanceOrig=1)=0.1625  P(newbalanceOrig=2)=0.5228  P(newbalanceOrig=3)=0.0444  P(newbalanceOrig=4)=0.1576
+  amount=0, oldbalanceDest=3, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.2739  P(newbalanceOrig=1)=0.2564  P(newbalanceOrig=2)=0.1180  P(newbalanceOrig=3)=0.1851  P(newbalanceOrig=4)=0.1667
+  amount=0, oldbalanceDest=3, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2130  P(newbalanceOrig=1)=0.1881  P(newbalanceOrig=2)=0.1396  P(newbalanceOrig=3)=0.2758  P(newbalanceOrig=4)=0.1835
+  amount=0, oldbalanceDest=4, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.1934  P(newbalanceOrig=1)=0.1312  P(newbalanceOrig=2)=0.2349  P(newbalanceOrig=3)=0.3370  P(newbalanceOrig=4)=0.1034
+  amount=0, oldbalanceDest=4, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.0825  P(newbalanceOrig=1)=0.6198  P(newbalanceOrig=2)=0.0803  P(newbalanceOrig=3)=0.0853  P(newbalanceOrig=4)=0.1321
+  amount=0, oldbalanceDest=4, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1921  P(newbalanceOrig=1)=0.1130  P(newbalanceOrig=2)=0.1360  P(newbalanceOrig=3)=0.1876  P(newbalanceOrig=4)=0.3713
+  amount=0, oldbalanceDest=4, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.1687  P(newbalanceOrig=1)=0.2352  P(newbalanceOrig=2)=0.1366  P(newbalanceOrig=3)=0.2500  P(newbalanceOrig=4)=0.2095
+  amount=0, oldbalanceDest=4, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.0791  P(newbalanceOrig=1)=0.6414  P(newbalanceOrig=2)=0.1375  P(newbalanceOrig=3)=0.0933  P(newbalanceOrig=4)=0.0488
+  amount=1, oldbalanceDest=0, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2027  P(newbalanceOrig=1)=0.0508  P(newbalanceOrig=2)=0.2508  P(newbalanceOrig=3)=0.2761  P(newbalanceOrig=4)=0.2196
+  amount=1, oldbalanceDest=0, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.3262  P(newbalanceOrig=1)=0.2012  P(newbalanceOrig=2)=0.0839  P(newbalanceOrig=3)=0.0634  P(newbalanceOrig=4)=0.3253
+  amount=1, oldbalanceDest=0, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1428  P(newbalanceOrig=1)=0.2581  P(newbalanceOrig=2)=0.4464  P(newbalanceOrig=3)=0.0790  P(newbalanceOrig=4)=0.0738
+  amount=1, oldbalanceDest=0, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.3141  P(newbalanceOrig=1)=0.1082  P(newbalanceOrig=2)=0.0407  P(newbalanceOrig=3)=0.2786  P(newbalanceOrig=4)=0.2584
+  amount=1, oldbalanceDest=0, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1346  P(newbalanceOrig=1)=0.0536  P(newbalanceOrig=2)=0.4586  P(newbalanceOrig=3)=0.0281  P(newbalanceOrig=4)=0.3251
+  amount=1, oldbalanceDest=1, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2261  P(newbalanceOrig=1)=0.3196  P(newbalanceOrig=2)=0.1749  P(newbalanceOrig=3)=0.1622  P(newbalanceOrig=4)=0.1171
+  amount=1, oldbalanceDest=1, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.3798  P(newbalanceOrig=1)=0.0650  P(newbalanceOrig=2)=0.1162  P(newbalanceOrig=3)=0.0456  P(newbalanceOrig=4)=0.3933
+  amount=1, oldbalanceDest=1, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1144  P(newbalanceOrig=1)=0.2066  P(newbalanceOrig=2)=0.2327  P(newbalanceOrig=3)=0.0812  P(newbalanceOrig=4)=0.3651
+  amount=1, oldbalanceDest=1, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.2980  P(newbalanceOrig=1)=0.0594  P(newbalanceOrig=2)=0.2161  P(newbalanceOrig=3)=0.2411  P(newbalanceOrig=4)=0.1853
+  amount=1, oldbalanceDest=1, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2110  P(newbalanceOrig=1)=0.0711  P(newbalanceOrig=2)=0.1245  P(newbalanceOrig=3)=0.3216  P(newbalanceOrig=4)=0.2718
+  amount=1, oldbalanceDest=2, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.3251  P(newbalanceOrig=1)=0.1117  P(newbalanceOrig=2)=0.1216  P(newbalanceOrig=3)=0.2701  P(newbalanceOrig=4)=0.1715
+  amount=1, oldbalanceDest=2, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.0839  P(newbalanceOrig=1)=0.0649  P(newbalanceOrig=2)=0.4720  P(newbalanceOrig=3)=0.2269  P(newbalanceOrig=4)=0.1523
+  amount=1, oldbalanceDest=2, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.2108  P(newbalanceOrig=1)=0.2422  P(newbalanceOrig=2)=0.2441  P(newbalanceOrig=3)=0.1391  P(newbalanceOrig=4)=0.1637
+  amount=1, oldbalanceDest=2, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.2003  P(newbalanceOrig=1)=0.1164  P(newbalanceOrig=2)=0.3467  P(newbalanceOrig=3)=0.0303  P(newbalanceOrig=4)=0.3064
+  amount=1, oldbalanceDest=2, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2080  P(newbalanceOrig=1)=0.0149  P(newbalanceOrig=2)=0.4147  P(newbalanceOrig=3)=0.0720  P(newbalanceOrig=4)=0.2903
+  amount=1, oldbalanceDest=3, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.1921  P(newbalanceOrig=1)=0.0629  P(newbalanceOrig=2)=0.3347  P(newbalanceOrig=3)=0.1920  P(newbalanceOrig=4)=0.2183
+  amount=1, oldbalanceDest=3, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.4100  P(newbalanceOrig=1)=0.1869  P(newbalanceOrig=2)=0.1389  P(newbalanceOrig=3)=0.1890  P(newbalanceOrig=4)=0.0752
+  amount=1, oldbalanceDest=3, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1900  P(newbalanceOrig=1)=0.2105  P(newbalanceOrig=2)=0.1891  P(newbalanceOrig=3)=0.3167  P(newbalanceOrig=4)=0.0937
+  amount=1, oldbalanceDest=3, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.3739  P(newbalanceOrig=1)=0.1412  P(newbalanceOrig=2)=0.0947  P(newbalanceOrig=3)=0.0520  P(newbalanceOrig=4)=0.3383
+  amount=1, oldbalanceDest=3, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.0672  P(newbalanceOrig=1)=0.0483  P(newbalanceOrig=2)=0.2650  P(newbalanceOrig=3)=0.5538  P(newbalanceOrig=4)=0.0659
+  amount=1, oldbalanceDest=4, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2315  P(newbalanceOrig=1)=0.4985  P(newbalanceOrig=2)=0.0385  P(newbalanceOrig=3)=0.0608  P(newbalanceOrig=4)=0.1707
+  amount=1, oldbalanceDest=4, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.0483  P(newbalanceOrig=1)=0.2132  P(newbalanceOrig=2)=0.0175  P(newbalanceOrig=3)=0.4405  P(newbalanceOrig=4)=0.2805
+  amount=1, oldbalanceDest=4, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.2977  P(newbalanceOrig=1)=0.0896  P(newbalanceOrig=2)=0.0157  P(newbalanceOrig=3)=0.4467  P(newbalanceOrig=4)=0.1503
+  amount=1, oldbalanceDest=4, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.1099  P(newbalanceOrig=1)=0.1884  P(newbalanceOrig=2)=0.2481  P(newbalanceOrig=3)=0.4133  P(newbalanceOrig=4)=0.0403
+  amount=1, oldbalanceDest=4, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2645  P(newbalanceOrig=1)=0.2628  P(newbalanceOrig=2)=0.3213  P(newbalanceOrig=3)=0.0457  P(newbalanceOrig=4)=0.1058
+  amount=2, oldbalanceDest=0, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2261  P(newbalanceOrig=1)=0.2298  P(newbalanceOrig=2)=0.1227  P(newbalanceOrig=3)=0.2166  P(newbalanceOrig=4)=0.2048
+  amount=2, oldbalanceDest=0, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.0921  P(newbalanceOrig=1)=0.1855  P(newbalanceOrig=2)=0.1064  P(newbalanceOrig=3)=0.2054  P(newbalanceOrig=4)=0.4106
+  amount=2, oldbalanceDest=0, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1398  P(newbalanceOrig=1)=0.0123  P(newbalanceOrig=2)=0.5200  P(newbalanceOrig=3)=0.3159  P(newbalanceOrig=4)=0.0120
+  amount=2, oldbalanceDest=0, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.0115  P(newbalanceOrig=1)=0.4305  P(newbalanceOrig=2)=0.0771  P(newbalanceOrig=3)=0.2432  P(newbalanceOrig=4)=0.2377
+  amount=2, oldbalanceDest=0, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2640  P(newbalanceOrig=1)=0.1846  P(newbalanceOrig=2)=0.1575  P(newbalanceOrig=3)=0.0907  P(newbalanceOrig=4)=0.3032
+  amount=2, oldbalanceDest=1, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.0066  P(newbalanceOrig=1)=0.1435  P(newbalanceOrig=2)=0.5335  P(newbalanceOrig=3)=0.1017  P(newbalanceOrig=4)=0.2148
+  amount=2, oldbalanceDest=1, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.4794  P(newbalanceOrig=1)=0.0464  P(newbalanceOrig=2)=0.0770  P(newbalanceOrig=3)=0.2357  P(newbalanceOrig=4)=0.1615
+  amount=2, oldbalanceDest=1, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.3137  P(newbalanceOrig=1)=0.0746  P(newbalanceOrig=2)=0.1030  P(newbalanceOrig=3)=0.4080  P(newbalanceOrig=4)=0.1007
+  amount=2, oldbalanceDest=1, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.1500  P(newbalanceOrig=1)=0.0715  P(newbalanceOrig=2)=0.0831  P(newbalanceOrig=3)=0.5699  P(newbalanceOrig=4)=0.1255
+  amount=2, oldbalanceDest=1, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.0881  P(newbalanceOrig=1)=0.2379  P(newbalanceOrig=2)=0.1879  P(newbalanceOrig=3)=0.3489  P(newbalanceOrig=4)=0.1373
+  amount=2, oldbalanceDest=2, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2111  P(newbalanceOrig=1)=0.0656  P(newbalanceOrig=2)=0.2439  P(newbalanceOrig=3)=0.1071  P(newbalanceOrig=4)=0.3723
+  amount=2, oldbalanceDest=2, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.2270  P(newbalanceOrig=1)=0.1656  P(newbalanceOrig=2)=0.1781  P(newbalanceOrig=3)=0.3530  P(newbalanceOrig=4)=0.0763
+  amount=2, oldbalanceDest=2, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.0448  P(newbalanceOrig=1)=0.1558  P(newbalanceOrig=2)=0.0207  P(newbalanceOrig=3)=0.2824  P(newbalanceOrig=4)=0.4963
+  amount=2, oldbalanceDest=2, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.4251  P(newbalanceOrig=1)=0.3352  P(newbalanceOrig=2)=0.0738  P(newbalanceOrig=3)=0.1180  P(newbalanceOrig=4)=0.0479
+  amount=2, oldbalanceDest=2, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1900  P(newbalanceOrig=1)=0.2280  P(newbalanceOrig=2)=0.0084  P(newbalanceOrig=3)=0.4614  P(newbalanceOrig=4)=0.1122
+  amount=2, oldbalanceDest=3, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2097  P(newbalanceOrig=1)=0.3696  P(newbalanceOrig=2)=0.1900  P(newbalanceOrig=3)=0.1972  P(newbalanceOrig=4)=0.0335
+  amount=2, oldbalanceDest=3, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.0571  P(newbalanceOrig=1)=0.2066  P(newbalanceOrig=2)=0.1778  P(newbalanceOrig=3)=0.3131  P(newbalanceOrig=4)=0.2454
+  amount=2, oldbalanceDest=3, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.3285  P(newbalanceOrig=1)=0.1079  P(newbalanceOrig=2)=0.1110  P(newbalanceOrig=3)=0.3307  P(newbalanceOrig=4)=0.1220
+  amount=2, oldbalanceDest=3, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.3367  P(newbalanceOrig=1)=0.2704  P(newbalanceOrig=2)=0.0998  P(newbalanceOrig=3)=0.2267  P(newbalanceOrig=4)=0.0665
+  amount=2, oldbalanceDest=3, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.0771  P(newbalanceOrig=1)=0.4381  P(newbalanceOrig=2)=0.0598  P(newbalanceOrig=3)=0.1285  P(newbalanceOrig=4)=0.2965
+  amount=2, oldbalanceDest=4, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.3028  P(newbalanceOrig=1)=0.1063  P(newbalanceOrig=2)=0.2042  P(newbalanceOrig=3)=0.1280  P(newbalanceOrig=4)=0.2587
+  amount=2, oldbalanceDest=4, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.2907  P(newbalanceOrig=1)=0.0686  P(newbalanceOrig=2)=0.1299  P(newbalanceOrig=3)=0.1094  P(newbalanceOrig=4)=0.4015
+  amount=2, oldbalanceDest=4, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1258  P(newbalanceOrig=1)=0.3399  P(newbalanceOrig=2)=0.2229  P(newbalanceOrig=3)=0.1666  P(newbalanceOrig=4)=0.1448
+  amount=2, oldbalanceDest=4, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.0877  P(newbalanceOrig=1)=0.3015  P(newbalanceOrig=2)=0.1946  P(newbalanceOrig=3)=0.3217  P(newbalanceOrig=4)=0.0946
+  amount=2, oldbalanceDest=4, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1404  P(newbalanceOrig=1)=0.0569  P(newbalanceOrig=2)=0.1809  P(newbalanceOrig=3)=0.3402  P(newbalanceOrig=4)=0.2816
+  amount=3, oldbalanceDest=0, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.0699  P(newbalanceOrig=1)=0.1965  P(newbalanceOrig=2)=0.2451  P(newbalanceOrig=3)=0.2887  P(newbalanceOrig=4)=0.1998
+  amount=3, oldbalanceDest=0, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.3884  P(newbalanceOrig=1)=0.3202  P(newbalanceOrig=2)=0.1709  P(newbalanceOrig=3)=0.1012  P(newbalanceOrig=4)=0.0193
+  amount=3, oldbalanceDest=0, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1161  P(newbalanceOrig=1)=0.1247  P(newbalanceOrig=2)=0.1287  P(newbalanceOrig=3)=0.3579  P(newbalanceOrig=4)=0.2725
+  amount=3, oldbalanceDest=0, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.0054  P(newbalanceOrig=1)=0.3071  P(newbalanceOrig=2)=0.1474  P(newbalanceOrig=3)=0.3235  P(newbalanceOrig=4)=0.2166
+  amount=3, oldbalanceDest=0, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2151  P(newbalanceOrig=1)=0.1748  P(newbalanceOrig=2)=0.2810  P(newbalanceOrig=3)=0.1549  P(newbalanceOrig=4)=0.1742
+  amount=3, oldbalanceDest=1, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2165  P(newbalanceOrig=1)=0.1711  P(newbalanceOrig=2)=0.2936  P(newbalanceOrig=3)=0.0483  P(newbalanceOrig=4)=0.2705
+  amount=3, oldbalanceDest=1, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.0561  P(newbalanceOrig=1)=0.4334  P(newbalanceOrig=2)=0.2257  P(newbalanceOrig=3)=0.1263  P(newbalanceOrig=4)=0.1584
+  amount=3, oldbalanceDest=1, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.2573  P(newbalanceOrig=1)=0.1757  P(newbalanceOrig=2)=0.2788  P(newbalanceOrig=3)=0.1356  P(newbalanceOrig=4)=0.1526
+  amount=3, oldbalanceDest=1, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.2939  P(newbalanceOrig=1)=0.1241  P(newbalanceOrig=2)=0.1341  P(newbalanceOrig=3)=0.1737  P(newbalanceOrig=4)=0.2742
+  amount=3, oldbalanceDest=1, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2173  P(newbalanceOrig=1)=0.1526  P(newbalanceOrig=2)=0.4229  P(newbalanceOrig=3)=0.1103  P(newbalanceOrig=4)=0.0968
+  amount=3, oldbalanceDest=2, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.3207  P(newbalanceOrig=1)=0.2095  P(newbalanceOrig=2)=0.1159  P(newbalanceOrig=3)=0.2766  P(newbalanceOrig=4)=0.0773
+  amount=3, oldbalanceDest=2, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.1883  P(newbalanceOrig=1)=0.2789  P(newbalanceOrig=2)=0.1644  P(newbalanceOrig=3)=0.1598  P(newbalanceOrig=4)=0.2085
+  amount=3, oldbalanceDest=2, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1015  P(newbalanceOrig=1)=0.1993  P(newbalanceOrig=2)=0.1457  P(newbalanceOrig=3)=0.3454  P(newbalanceOrig=4)=0.2081
+  amount=3, oldbalanceDest=2, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.2615  P(newbalanceOrig=1)=0.1697  P(newbalanceOrig=2)=0.1070  P(newbalanceOrig=3)=0.3155  P(newbalanceOrig=4)=0.1463
+  amount=3, oldbalanceDest=2, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1299  P(newbalanceOrig=1)=0.2007  P(newbalanceOrig=2)=0.0854  P(newbalanceOrig=3)=0.2121  P(newbalanceOrig=4)=0.3719
+  amount=3, oldbalanceDest=3, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2740  P(newbalanceOrig=1)=0.1741  P(newbalanceOrig=2)=0.1288  P(newbalanceOrig=3)=0.1780  P(newbalanceOrig=4)=0.2451
+  amount=3, oldbalanceDest=3, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.2751  P(newbalanceOrig=1)=0.1022  P(newbalanceOrig=2)=0.2126  P(newbalanceOrig=3)=0.2000  P(newbalanceOrig=4)=0.2101
+  amount=3, oldbalanceDest=3, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.2215  P(newbalanceOrig=1)=0.3974  P(newbalanceOrig=2)=0.0597  P(newbalanceOrig=3)=0.2441  P(newbalanceOrig=4)=0.0774
+  amount=3, oldbalanceDest=3, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.1548  P(newbalanceOrig=1)=0.0541  P(newbalanceOrig=2)=0.1811  P(newbalanceOrig=3)=0.3726  P(newbalanceOrig=4)=0.2375
+  amount=3, oldbalanceDest=3, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.3469  P(newbalanceOrig=1)=0.0327  P(newbalanceOrig=2)=0.1422  P(newbalanceOrig=3)=0.1164  P(newbalanceOrig=4)=0.3617
+  amount=3, oldbalanceDest=4, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.0509  P(newbalanceOrig=1)=0.6826  P(newbalanceOrig=2)=0.1311  P(newbalanceOrig=3)=0.0496  P(newbalanceOrig=4)=0.0857
+  amount=3, oldbalanceDest=4, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.3931  P(newbalanceOrig=1)=0.1805  P(newbalanceOrig=2)=0.0573  P(newbalanceOrig=3)=0.0517  P(newbalanceOrig=4)=0.3174
+  amount=3, oldbalanceDest=4, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.3115  P(newbalanceOrig=1)=0.0922  P(newbalanceOrig=2)=0.2805  P(newbalanceOrig=3)=0.2178  P(newbalanceOrig=4)=0.0979
+  amount=3, oldbalanceDest=4, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.2705  P(newbalanceOrig=1)=0.2152  P(newbalanceOrig=2)=0.1606  P(newbalanceOrig=3)=0.1821  P(newbalanceOrig=4)=0.1716
+  amount=3, oldbalanceDest=4, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1162  P(newbalanceOrig=1)=0.1566  P(newbalanceOrig=2)=0.3360  P(newbalanceOrig=3)=0.0861  P(newbalanceOrig=4)=0.3050
+  amount=4, oldbalanceDest=0, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.1789  P(newbalanceOrig=1)=0.0607  P(newbalanceOrig=2)=0.3160  P(newbalanceOrig=3)=0.2489  P(newbalanceOrig=4)=0.1955
+  amount=4, oldbalanceDest=0, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.2343  P(newbalanceOrig=1)=0.1669  P(newbalanceOrig=2)=0.1106  P(newbalanceOrig=3)=0.1847  P(newbalanceOrig=4)=0.3034
+  amount=4, oldbalanceDest=0, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.2732  P(newbalanceOrig=1)=0.1601  P(newbalanceOrig=2)=0.2141  P(newbalanceOrig=3)=0.0495  P(newbalanceOrig=4)=0.3031
+  amount=4, oldbalanceDest=0, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.1163  P(newbalanceOrig=1)=0.2489  P(newbalanceOrig=2)=0.2174  P(newbalanceOrig=3)=0.0477  P(newbalanceOrig=4)=0.3698
+  amount=4, oldbalanceDest=0, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1532  P(newbalanceOrig=1)=0.0915  P(newbalanceOrig=2)=0.2505  P(newbalanceOrig=3)=0.1248  P(newbalanceOrig=4)=0.3800
+  amount=4, oldbalanceDest=1, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.1255  P(newbalanceOrig=1)=0.1600  P(newbalanceOrig=2)=0.4367  P(newbalanceOrig=3)=0.1119  P(newbalanceOrig=4)=0.1659
+  amount=4, oldbalanceDest=1, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.4642  P(newbalanceOrig=1)=0.2663  P(newbalanceOrig=2)=0.0883  P(newbalanceOrig=3)=0.0525  P(newbalanceOrig=4)=0.1286
+  amount=4, oldbalanceDest=1, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1891  P(newbalanceOrig=1)=0.3525  P(newbalanceOrig=2)=0.2840  P(newbalanceOrig=3)=0.0663  P(newbalanceOrig=4)=0.1081
+  amount=4, oldbalanceDest=1, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.3638  P(newbalanceOrig=1)=0.0244  P(newbalanceOrig=2)=0.1567  P(newbalanceOrig=3)=0.0696  P(newbalanceOrig=4)=0.3855
+  amount=4, oldbalanceDest=1, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.3065  P(newbalanceOrig=1)=0.1545  P(newbalanceOrig=2)=0.0883  P(newbalanceOrig=3)=0.3822  P(newbalanceOrig=4)=0.0685
+  amount=4, oldbalanceDest=2, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2181  P(newbalanceOrig=1)=0.1559  P(newbalanceOrig=2)=0.3612  P(newbalanceOrig=3)=0.0286  P(newbalanceOrig=4)=0.2361
+  amount=4, oldbalanceDest=2, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.2874  P(newbalanceOrig=1)=0.4111  P(newbalanceOrig=2)=0.1133  P(newbalanceOrig=3)=0.1014  P(newbalanceOrig=4)=0.0868
+  amount=4, oldbalanceDest=2, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.0909  P(newbalanceOrig=1)=0.4275  P(newbalanceOrig=2)=0.2454  P(newbalanceOrig=3)=0.0309  P(newbalanceOrig=4)=0.2053
+  amount=4, oldbalanceDest=2, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.0920  P(newbalanceOrig=1)=0.2592  P(newbalanceOrig=2)=0.2537  P(newbalanceOrig=3)=0.2649  P(newbalanceOrig=4)=0.1302
+  amount=4, oldbalanceDest=2, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.2458  P(newbalanceOrig=1)=0.3043  P(newbalanceOrig=2)=0.0556  P(newbalanceOrig=3)=0.1984  P(newbalanceOrig=4)=0.1959
+  amount=4, oldbalanceDest=3, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.2400  P(newbalanceOrig=1)=0.1713  P(newbalanceOrig=2)=0.0219  P(newbalanceOrig=3)=0.2960  P(newbalanceOrig=4)=0.2708
+  amount=4, oldbalanceDest=3, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.1456  P(newbalanceOrig=1)=0.1635  P(newbalanceOrig=2)=0.1323  P(newbalanceOrig=3)=0.3778  P(newbalanceOrig=4)=0.1808
+  amount=4, oldbalanceDest=3, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.1117  P(newbalanceOrig=1)=0.2790  P(newbalanceOrig=2)=0.3079  P(newbalanceOrig=3)=0.0349  P(newbalanceOrig=4)=0.2665
+  amount=4, oldbalanceDest=3, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.0149  P(newbalanceOrig=1)=0.1344  P(newbalanceOrig=2)=0.1670  P(newbalanceOrig=3)=0.4016  P(newbalanceOrig=4)=0.2820
+  amount=4, oldbalanceDest=3, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.0309  P(newbalanceOrig=1)=0.1815  P(newbalanceOrig=2)=0.4561  P(newbalanceOrig=3)=0.2031  P(newbalanceOrig=4)=0.1283
+  amount=4, oldbalanceDest=4, oldbalanceOrg=0 -> P(newbalanceOrig=0)=0.3918  P(newbalanceOrig=1)=0.1856  P(newbalanceOrig=2)=0.2227  P(newbalanceOrig=3)=0.0439  P(newbalanceOrig=4)=0.1560
+  amount=4, oldbalanceDest=4, oldbalanceOrg=1 -> P(newbalanceOrig=0)=0.5252  P(newbalanceOrig=1)=0.1809  P(newbalanceOrig=2)=0.0713  P(newbalanceOrig=3)=0.1663  P(newbalanceOrig=4)=0.0564
+  amount=4, oldbalanceDest=4, oldbalanceOrg=2 -> P(newbalanceOrig=0)=0.2204  P(newbalanceOrig=1)=0.1289  P(newbalanceOrig=2)=0.0954  P(newbalanceOrig=3)=0.1874  P(newbalanceOrig=4)=0.3679
+  amount=4, oldbalanceDest=4, oldbalanceOrg=3 -> P(newbalanceOrig=0)=0.2016  P(newbalanceOrig=1)=0.0100  P(newbalanceOrig=2)=0.1714  P(newbalanceOrig=3)=0.5625  P(newbalanceOrig=4)=0.0546
+  amount=4, oldbalanceDest=4, oldbalanceOrg=4 -> P(newbalanceOrig=0)=0.1687  P(newbalanceOrig=1)=0.1506  P(newbalanceOrig=2)=0.3194  P(newbalanceOrig=3)=0.1949  P(newbalanceOrig=4)=0.1663
+
+Node: newbalanceDest  (states: 5)
+Parents: amount
+------------------------------------------------------------------------------
+  amount=0                                 -> P(newbalanceDest=0)=0.1291  P(newbalanceDest=1)=0.2852  P(newbalanceDest=2)=0.2994  P(newbalanceDest=3)=0.1549  P(newbalanceDest=4)=0.1314
+  amount=1                                 -> P(newbalanceDest=0)=0.1184  P(newbalanceDest=1)=0.0773  P(newbalanceDest=2)=0.4633  P(newbalanceDest=3)=0.1902  P(newbalanceDest=4)=0.1508
+  amount=2                                 -> P(newbalanceDest=0)=0.0339  P(newbalanceDest=1)=0.0288  P(newbalanceDest=2)=0.5003  P(newbalanceDest=3)=0.1588  P(newbalanceDest=4)=0.2782
+  amount=3                                 -> P(newbalanceDest=0)=0.1469  P(newbalanceDest=1)=0.0236  P(newbalanceDest=2)=0.3396  P(newbalanceDest=3)=0.0485  P(newbalanceDest=4)=0.4415
+  amount=4                                 -> P(newbalanceDest=0)=0.2464  P(newbalanceDest=1)=0.1280  P(newbalanceDest=2)=0.0784  P(newbalanceDest=3)=0.3574  P(newbalanceDest=4)=0.1897
+
+Node: delta_orig  (states: 5)
+Parents: newbalanceDest, newbalanceOrig, oldbalanceDest
+------------------------------------------------------------------------------
+  newbalanceDest=0, newbalanceOrig=0, oldbalanceDest=0 -> P(delta_orig=0)=0.1711  P(delta_orig=1)=0.0325  P(delta_orig=2)=0.1561  P(delta_orig=3)=0.2891  P(delta_orig=4)=0.3513
+  newbalanceDest=0, newbalanceOrig=0, oldbalanceDest=1 -> P(delta_orig=0)=0.1331  P(delta_orig=1)=0.0923  P(delta_orig=2)=0.0389  P(delta_orig=3)=0.4108  P(delta_orig=4)=0.3249
+  newbalanceDest=0, newbalanceOrig=0, oldbalanceDest=2 -> P(delta_orig=0)=0.3226  P(delta_orig=1)=0.3276  P(delta_orig=2)=0.1030  P(delta_orig=3)=0.0582  P(delta_orig=4)=0.1885
+  newbalanceDest=0, newbalanceOrig=0, oldbalanceDest=3 -> P(delta_orig=0)=0.1583  P(delta_orig=1)=0.0957  P(delta_orig=2)=0.2964  P(delta_orig=3)=0.0564  P(delta_orig=4)=0.3933
+  newbalanceDest=0, newbalanceOrig=0, oldbalanceDest=4 -> P(delta_orig=0)=0.0998  P(delta_orig=1)=0.1584  P(delta_orig=2)=0.0074  P(delta_orig=3)=0.4090  P(delta_orig=4)=0.3254
+  newbalanceDest=0, newbalanceOrig=1, oldbalanceDest=0 -> P(delta_orig=0)=0.1226  P(delta_orig=1)=0.1136  P(delta_orig=2)=0.2730  P(delta_orig=3)=0.1803  P(delta_orig=4)=0.3104
+  newbalanceDest=0, newbalanceOrig=1, oldbalanceDest=1 -> P(delta_orig=0)=0.0445  P(delta_orig=1)=0.1428  P(delta_orig=2)=0.4187  P(delta_orig=3)=0.1096  P(delta_orig=4)=0.2846
+  newbalanceDest=0, newbalanceOrig=1, oldbalanceDest=2 -> P(delta_orig=0)=0.1635  P(delta_orig=1)=0.1686  P(delta_orig=2)=0.2848  P(delta_orig=3)=0.1983  P(delta_orig=4)=0.1848
+  newbalanceDest=0, newbalanceOrig=1, oldbalanceDest=3 -> P(delta_orig=0)=0.1295  P(delta_orig=1)=0.0440  P(delta_orig=2)=0.1918  P(delta_orig=3)=0.2474  P(delta_orig=4)=0.3873
+  newbalanceDest=0, newbalanceOrig=1, oldbalanceDest=4 -> P(delta_orig=0)=0.0671  P(delta_orig=1)=0.2239  P(delta_orig=2)=0.3326  P(delta_orig=3)=0.3016  P(delta_orig=4)=0.0748
+  newbalanceDest=0, newbalanceOrig=2, oldbalanceDest=0 -> P(delta_orig=0)=0.1187  P(delta_orig=1)=0.3337  P(delta_orig=2)=0.2927  P(delta_orig=3)=0.2396  P(delta_orig=4)=0.0153
+  newbalanceDest=0, newbalanceOrig=2, oldbalanceDest=1 -> P(delta_orig=0)=0.1973  P(delta_orig=1)=0.1339  P(delta_orig=2)=0.3598  P(delta_orig=3)=0.1061  P(delta_orig=4)=0.2028
+  newbalanceDest=0, newbalanceOrig=2, oldbalanceDest=2 -> P(delta_orig=0)=0.1143  P(delta_orig=1)=0.1142  P(delta_orig=2)=0.5014  P(delta_orig=3)=0.0912  P(delta_orig=4)=0.1789
+  newbalanceDest=0, newbalanceOrig=2, oldbalanceDest=3 -> P(delta_orig=0)=0.1385  P(delta_orig=1)=0.1706  P(delta_orig=2)=0.4184  P(delta_orig=3)=0.0783  P(delta_orig=4)=0.1942
+  newbalanceDest=0, newbalanceOrig=2, oldbalanceDest=4 -> P(delta_orig=0)=0.3756  P(delta_orig=1)=0.2307  P(delta_orig=2)=0.0991  P(delta_orig=3)=0.1585  P(delta_orig=4)=0.1361
+  newbalanceDest=0, newbalanceOrig=3, oldbalanceDest=0 -> P(delta_orig=0)=0.3068  P(delta_orig=1)=0.2907  P(delta_orig=2)=0.0456  P(delta_orig=3)=0.1608  P(delta_orig=4)=0.1961
+  newbalanceDest=0, newbalanceOrig=3, oldbalanceDest=1 -> P(delta_orig=0)=0.1762  P(delta_orig=1)=0.2538  P(delta_orig=2)=0.3315  P(delta_orig=3)=0.1462  P(delta_orig=4)=0.0923
+  newbalanceDest=0, newbalanceOrig=3, oldbalanceDest=2 -> P(delta_orig=0)=0.1206  P(delta_orig=1)=0.0507  P(delta_orig=2)=0.2901  P(delta_orig=3)=0.1732  P(delta_orig=4)=0.3655
+  newbalanceDest=0, newbalanceOrig=3, oldbalanceDest=3 -> P(delta_orig=0)=0.2386  P(delta_orig=1)=0.0933  P(delta_orig=2)=0.0915  P(delta_orig=3)=0.3861  P(delta_orig=4)=0.1904
+  newbalanceDest=0, newbalanceOrig=3, oldbalanceDest=4 -> P(delta_orig=0)=0.0500  P(delta_orig=1)=0.1174  P(delta_orig=2)=0.5168  P(delta_orig=3)=0.1687  P(delta_orig=4)=0.1471
+  newbalanceDest=0, newbalanceOrig=4, oldbalanceDest=0 -> P(delta_orig=0)=0.0876  P(delta_orig=1)=0.0167  P(delta_orig=2)=0.3830  P(delta_orig=3)=0.2290  P(delta_orig=4)=0.2836
+  newbalanceDest=0, newbalanceOrig=4, oldbalanceDest=1 -> P(delta_orig=0)=0.3690  P(delta_orig=1)=0.1623  P(delta_orig=2)=0.0682  P(delta_orig=3)=0.3363  P(delta_orig=4)=0.0642
+  newbalanceDest=0, newbalanceOrig=4, oldbalanceDest=2 -> P(delta_orig=0)=0.2212  P(delta_orig=1)=0.0901  P(delta_orig=2)=0.3492  P(delta_orig=3)=0.2358  P(delta_orig=4)=0.1037
+  newbalanceDest=0, newbalanceOrig=4, oldbalanceDest=3 -> P(delta_orig=0)=0.0481  P(delta_orig=1)=0.1411  P(delta_orig=2)=0.2562  P(delta_orig=3)=0.2643  P(delta_orig=4)=0.2903
+  newbalanceDest=0, newbalanceOrig=4, oldbalanceDest=4 -> P(delta_orig=0)=0.1993  P(delta_orig=1)=0.4132  P(delta_orig=2)=0.2056  P(delta_orig=3)=0.0808  P(delta_orig=4)=0.1011
+  newbalanceDest=1, newbalanceOrig=0, oldbalanceDest=0 -> P(delta_orig=0)=0.3094  P(delta_orig=1)=0.0689  P(delta_orig=2)=0.0605  P(delta_orig=3)=0.3873  P(delta_orig=4)=0.1739
+  newbalanceDest=1, newbalanceOrig=0, oldbalanceDest=1 -> P(delta_orig=0)=0.1506  P(delta_orig=1)=0.2253  P(delta_orig=2)=0.2211  P(delta_orig=3)=0.1160  P(delta_orig=4)=0.2870
+  newbalanceDest=1, newbalanceOrig=0, oldbalanceDest=2 -> P(delta_orig=0)=0.4949  P(delta_orig=1)=0.0556  P(delta_orig=2)=0.2393  P(delta_orig=3)=0.0830  P(delta_orig=4)=0.1272
+  newbalanceDest=1, newbalanceOrig=0, oldbalanceDest=3 -> P(delta_orig=0)=0.0522  P(delta_orig=1)=0.4859  P(delta_orig=2)=0.1652  P(delta_orig=3)=0.1277  P(delta_orig=4)=0.1690
+  newbalanceDest=1, newbalanceOrig=0, oldbalanceDest=4 -> P(delta_orig=0)=0.1498  P(delta_orig=1)=0.2018  P(delta_orig=2)=0.2678  P(delta_orig=3)=0.0942  P(delta_orig=4)=0.2864
+  newbalanceDest=1, newbalanceOrig=1, oldbalanceDest=0 -> P(delta_orig=0)=0.1078  P(delta_orig=1)=0.2120  P(delta_orig=2)=0.0998  P(delta_orig=3)=0.2801  P(delta_orig=4)=0.3003
+  newbalanceDest=1, newbalanceOrig=1, oldbalanceDest=1 -> P(delta_orig=0)=0.1170  P(delta_orig=1)=0.4909  P(delta_orig=2)=0.1542  P(delta_orig=3)=0.0329  P(delta_orig=4)=0.2048
+  newbalanceDest=1, newbalanceOrig=1, oldbalanceDest=2 -> P(delta_orig=0)=0.4589  P(delta_orig=1)=0.0956  P(delta_orig=2)=0.0457  P(delta_orig=3)=0.2559  P(delta_orig=4)=0.1440
+  newbalanceDest=1, newbalanceOrig=1, oldbalanceDest=3 -> P(delta_orig=0)=0.2450  P(delta_orig=1)=0.2536  P(delta_orig=2)=0.1547  P(delta_orig=3)=0.1714  P(delta_orig=4)=0.1754
+  newbalanceDest=1, newbalanceOrig=1, oldbalanceDest=4 -> P(delta_orig=0)=0.1537  P(delta_orig=1)=0.2892  P(delta_orig=2)=0.0863  P(delta_orig=3)=0.3421  P(delta_orig=4)=0.1287
+  newbalanceDest=1, newbalanceOrig=2, oldbalanceDest=0 -> P(delta_orig=0)=0.2588  P(delta_orig=1)=0.4461  P(delta_orig=2)=0.1101  P(delta_orig=3)=0.1369  P(delta_orig=4)=0.0480
+  newbalanceDest=1, newbalanceOrig=2, oldbalanceDest=1 -> P(delta_orig=0)=0.1831  P(delta_orig=1)=0.2353  P(delta_orig=2)=0.2464  P(delta_orig=3)=0.0794  P(delta_orig=4)=0.2558
+  newbalanceDest=1, newbalanceOrig=2, oldbalanceDest=2 -> P(delta_orig=0)=0.0714  P(delta_orig=1)=0.3417  P(delta_orig=2)=0.1572  P(delta_orig=3)=0.1224  P(delta_orig=4)=0.3073
+  newbalanceDest=1, newbalanceOrig=2, oldbalanceDest=3 -> P(delta_orig=0)=0.2205  P(delta_orig=1)=0.2806  P(delta_orig=2)=0.1317  P(delta_orig=3)=0.0673  P(delta_orig=4)=0.2999
+  newbalanceDest=1, newbalanceOrig=2, oldbalanceDest=4 -> P(delta_orig=0)=0.4843  P(delta_orig=1)=0.1368  P(delta_orig=2)=0.1321  P(delta_orig=3)=0.0830  P(delta_orig=4)=0.1639
+  newbalanceDest=1, newbalanceOrig=3, oldbalanceDest=0 -> P(delta_orig=0)=0.2154  P(delta_orig=1)=0.2172  P(delta_orig=2)=0.0516  P(delta_orig=3)=0.1721  P(delta_orig=4)=0.3437
+  newbalanceDest=1, newbalanceOrig=3, oldbalanceDest=1 -> P(delta_orig=0)=0.2369  P(delta_orig=1)=0.1442  P(delta_orig=2)=0.0987  P(delta_orig=3)=0.1163  P(delta_orig=4)=0.4039
+  newbalanceDest=1, newbalanceOrig=3, oldbalanceDest=2 -> P(delta_orig=0)=0.1897  P(delta_orig=1)=0.0970  P(delta_orig=2)=0.1706  P(delta_orig=3)=0.1121  P(delta_orig=4)=0.4306
+  newbalanceDest=1, newbalanceOrig=3, oldbalanceDest=3 -> P(delta_orig=0)=0.0281  P(delta_orig=1)=0.2185  P(delta_orig=2)=0.0223  P(delta_orig=3)=0.2511  P(delta_orig=4)=0.4799
+  newbalanceDest=1, newbalanceOrig=3, oldbalanceDest=4 -> P(delta_orig=0)=0.1819  P(delta_orig=1)=0.2749  P(delta_orig=2)=0.2387  P(delta_orig=3)=0.2038  P(delta_orig=4)=0.1007
+  newbalanceDest=1, newbalanceOrig=4, oldbalanceDest=0 -> P(delta_orig=0)=0.1017  P(delta_orig=1)=0.2564  P(delta_orig=2)=0.1244  P(delta_orig=3)=0.3464  P(delta_orig=4)=0.1711
+  newbalanceDest=1, newbalanceOrig=4, oldbalanceDest=1 -> P(delta_orig=0)=0.0624  P(delta_orig=1)=0.2882  P(delta_orig=2)=0.1677  P(delta_orig=3)=0.0574  P(delta_orig=4)=0.4243
+  newbalanceDest=1, newbalanceOrig=4, oldbalanceDest=2 -> P(delta_orig=0)=0.1921  P(delta_orig=1)=0.3721  P(delta_orig=2)=0.2187  P(delta_orig=3)=0.1247  P(delta_orig=4)=0.0924
+  newbalanceDest=1, newbalanceOrig=4, oldbalanceDest=3 -> P(delta_orig=0)=0.2009  P(delta_orig=1)=0.3624  P(delta_orig=2)=0.1884  P(delta_orig=3)=0.0865  P(delta_orig=4)=0.1619
+  newbalanceDest=1, newbalanceOrig=4, oldbalanceDest=4 -> P(delta_orig=0)=0.0626  P(delta_orig=1)=0.2044  P(delta_orig=2)=0.2597  P(delta_orig=3)=0.1041  P(delta_orig=4)=0.3693
+  newbalanceDest=2, newbalanceOrig=0, oldbalanceDest=0 -> P(delta_orig=0)=0.1395  P(delta_orig=1)=0.2645  P(delta_orig=2)=0.3634  P(delta_orig=3)=0.1572  P(delta_orig=4)=0.0754
+  newbalanceDest=2, newbalanceOrig=0, oldbalanceDest=1 -> P(delta_orig=0)=0.0972  P(delta_orig=1)=0.1773  P(delta_orig=2)=0.1665  P(delta_orig=3)=0.2237  P(delta_orig=4)=0.3353
+  newbalanceDest=2, newbalanceOrig=0, oldbalanceDest=2 -> P(delta_orig=0)=0.1598  P(delta_orig=1)=0.1720  P(delta_orig=2)=0.3094  P(delta_orig=3)=0.0441  P(delta_orig=4)=0.3148
+  newbalanceDest=2, newbalanceOrig=0, oldbalanceDest=3 -> P(delta_orig=0)=0.1577  P(delta_orig=1)=0.1456  P(delta_orig=2)=0.3104  P(delta_orig=3)=0.1092  P(delta_orig=4)=0.2771
+  newbalanceDest=2, newbalanceOrig=0, oldbalanceDest=4 -> P(delta_orig=0)=0.2542  P(delta_orig=1)=0.0701  P(delta_orig=2)=0.1641  P(delta_orig=3)=0.1405  P(delta_orig=4)=0.3710
+  newbalanceDest=2, newbalanceOrig=1, oldbalanceDest=0 -> P(delta_orig=0)=0.0480  P(delta_orig=1)=0.1631  P(delta_orig=2)=0.0785  P(delta_orig=3)=0.4282  P(delta_orig=4)=0.2822
+  newbalanceDest=2, newbalanceOrig=1, oldbalanceDest=1 -> P(delta_orig=0)=0.3917  P(delta_orig=1)=0.0470  P(delta_orig=2)=0.1200  P(delta_orig=3)=0.3362  P(delta_orig=4)=0.1052
+  newbalanceDest=2, newbalanceOrig=1, oldbalanceDest=2 -> P(delta_orig=0)=0.2579  P(delta_orig=1)=0.2283  P(delta_orig=2)=0.1573  P(delta_orig=3)=0.1519  P(delta_orig=4)=0.2046
+  newbalanceDest=2, newbalanceOrig=1, oldbalanceDest=3 -> P(delta_orig=0)=0.0963  P(delta_orig=1)=0.4833  P(delta_orig=2)=0.3024  P(delta_orig=3)=0.0198  P(delta_orig=4)=0.0982
+  newbalanceDest=2, newbalanceOrig=1, oldbalanceDest=4 -> P(delta_orig=0)=0.0101  P(delta_orig=1)=0.0577  P(delta_orig=2)=0.5164  P(delta_orig=3)=0.2582  P(delta_orig=4)=0.1576
+  newbalanceDest=2, newbalanceOrig=2, oldbalanceDest=0 -> P(delta_orig=0)=0.3387  P(delta_orig=1)=0.1303  P(delta_orig=2)=0.0546  P(delta_orig=3)=0.1203  P(delta_orig=4)=0.3561
+  newbalanceDest=2, newbalanceOrig=2, oldbalanceDest=1 -> P(delta_orig=0)=0.1579  P(delta_orig=1)=0.2700  P(delta_orig=2)=0.1295  P(delta_orig=3)=0.0829  P(delta_orig=4)=0.3597
+  newbalanceDest=2, newbalanceOrig=2, oldbalanceDest=2 -> P(delta_orig=0)=0.0919  P(delta_orig=1)=0.3040  P(delta_orig=2)=0.0576  P(delta_orig=3)=0.2981  P(delta_orig=4)=0.2485
+  newbalanceDest=2, newbalanceOrig=2, oldbalanceDest=3 -> P(delta_orig=0)=0.4517  P(delta_orig=1)=0.0831  P(delta_orig=2)=0.2941  P(delta_orig=3)=0.1246  P(delta_orig=4)=0.0465
+  newbalanceDest=2, newbalanceOrig=2, oldbalanceDest=4 -> P(delta_orig=0)=0.0682  P(delta_orig=1)=0.3643  P(delta_orig=2)=0.3637  P(delta_orig=3)=0.0528  P(delta_orig=4)=0.1510
+  newbalanceDest=2, newbalanceOrig=3, oldbalanceDest=0 -> P(delta_orig=0)=0.2312  P(delta_orig=1)=0.0626  P(delta_orig=2)=0.2488  P(delta_orig=3)=0.3142  P(delta_orig=4)=0.1432
+  newbalanceDest=2, newbalanceOrig=3, oldbalanceDest=1 -> P(delta_orig=0)=0.1162  P(delta_orig=1)=0.1964  P(delta_orig=2)=0.0529  P(delta_orig=3)=0.4627  P(delta_orig=4)=0.1719
+  newbalanceDest=2, newbalanceOrig=3, oldbalanceDest=2 -> P(delta_orig=0)=0.4541  P(delta_orig=1)=0.2346  P(delta_orig=2)=0.0932  P(delta_orig=3)=0.0185  P(delta_orig=4)=0.1996
+  newbalanceDest=2, newbalanceOrig=3, oldbalanceDest=3 -> P(delta_orig=0)=0.1575  P(delta_orig=1)=0.2896  P(delta_orig=2)=0.0825  P(delta_orig=3)=0.1845  P(delta_orig=4)=0.2860
+  newbalanceDest=2, newbalanceOrig=3, oldbalanceDest=4 -> P(delta_orig=0)=0.1683  P(delta_orig=1)=0.2956  P(delta_orig=2)=0.2782  P(delta_orig=3)=0.1330  P(delta_orig=4)=0.1249
+  newbalanceDest=2, newbalanceOrig=4, oldbalanceDest=0 -> P(delta_orig=0)=0.4379  P(delta_orig=1)=0.0517  P(delta_orig=2)=0.0787  P(delta_orig=3)=0.1187  P(delta_orig=4)=0.3130
+  newbalanceDest=2, newbalanceOrig=4, oldbalanceDest=1 -> P(delta_orig=0)=0.0950  P(delta_orig=1)=0.0661  P(delta_orig=2)=0.1512  P(delta_orig=3)=0.6664  P(delta_orig=4)=0.0214
+  newbalanceDest=2, newbalanceOrig=4, oldbalanceDest=2 -> P(delta_orig=0)=0.1356  P(delta_orig=1)=0.3904  P(delta_orig=2)=0.1982  P(delta_orig=3)=0.0553  P(delta_orig=4)=0.2204
+  newbalanceDest=2, newbalanceOrig=4, oldbalanceDest=3 -> P(delta_orig=0)=0.4480  P(delta_orig=1)=0.1247  P(delta_orig=2)=0.2895  P(delta_orig=3)=0.0746  P(delta_orig=4)=0.0632
+  newbalanceDest=2, newbalanceOrig=4, oldbalanceDest=4 -> P(delta_orig=0)=0.0675  P(delta_orig=1)=0.1703  P(delta_orig=2)=0.3566  P(delta_orig=3)=0.3372  P(delta_orig=4)=0.0685
+  newbalanceDest=3, newbalanceOrig=0, oldbalanceDest=0 -> P(delta_orig=0)=0.2236  P(delta_orig=1)=0.2141  P(delta_orig=2)=0.3369  P(delta_orig=3)=0.0269  P(delta_orig=4)=0.1984
+  newbalanceDest=3, newbalanceOrig=0, oldbalanceDest=1 -> P(delta_orig=0)=0.0148  P(delta_orig=1)=0.3319  P(delta_orig=2)=0.2430  P(delta_orig=3)=0.0476  P(delta_orig=4)=0.3627
+  newbalanceDest=3, newbalanceOrig=0, oldbalanceDest=2 -> P(delta_orig=0)=0.0728  P(delta_orig=1)=0.2419  P(delta_orig=2)=0.2125  P(delta_orig=3)=0.0567  P(delta_orig=4)=0.4162
+  newbalanceDest=3, newbalanceOrig=0, oldbalanceDest=3 -> P(delta_orig=0)=0.2507  P(delta_orig=1)=0.2358  P(delta_orig=2)=0.1436  P(delta_orig=3)=0.2827  P(delta_orig=4)=0.0871
+  newbalanceDest=3, newbalanceOrig=0, oldbalanceDest=4 -> P(delta_orig=0)=0.3092  P(delta_orig=1)=0.1396  P(delta_orig=2)=0.1152  P(delta_orig=3)=0.2165  P(delta_orig=4)=0.2194
+  newbalanceDest=3, newbalanceOrig=1, oldbalanceDest=0 -> P(delta_orig=0)=0.2466  P(delta_orig=1)=0.1369  P(delta_orig=2)=0.4153  P(delta_orig=3)=0.0416  P(delta_orig=4)=0.1595
+  newbalanceDest=3, newbalanceOrig=1, oldbalanceDest=1 -> P(delta_orig=0)=0.2732  P(delta_orig=1)=0.0727  P(delta_orig=2)=0.2013  P(delta_orig=3)=0.2912  P(delta_orig=4)=0.1617
+  newbalanceDest=3, newbalanceOrig=1, oldbalanceDest=2 -> P(delta_orig=0)=0.1272  P(delta_orig=1)=0.1033  P(delta_orig=2)=0.2135  P(delta_orig=3)=0.4217  P(delta_orig=4)=0.1344
+  newbalanceDest=3, newbalanceOrig=1, oldbalanceDest=3 -> P(delta_orig=0)=0.0309  P(delta_orig=1)=0.1888  P(delta_orig=2)=0.1569  P(delta_orig=3)=0.4166  P(delta_orig=4)=0.2068
+  newbalanceDest=3, newbalanceOrig=1, oldbalanceDest=4 -> P(delta_orig=0)=0.0903  P(delta_orig=1)=0.0689  P(delta_orig=2)=0.0967  P(delta_orig=3)=0.4824  P(delta_orig=4)=0.2618
+  newbalanceDest=3, newbalanceOrig=2, oldbalanceDest=0 -> P(delta_orig=0)=0.2671  P(delta_orig=1)=0.2495  P(delta_orig=2)=0.2878  P(delta_orig=3)=0.0637  P(delta_orig=4)=0.1319
+  newbalanceDest=3, newbalanceOrig=2, oldbalanceDest=1 -> P(delta_orig=0)=0.1728  P(delta_orig=1)=0.2812  P(delta_orig=2)=0.1730  P(delta_orig=3)=0.2381  P(delta_orig=4)=0.1348
+  newbalanceDest=3, newbalanceOrig=2, oldbalanceDest=2 -> P(delta_orig=0)=0.2567  P(delta_orig=1)=0.1520  P(delta_orig=2)=0.1158  P(delta_orig=3)=0.3270  P(delta_orig=4)=0.1486
+  newbalanceDest=3, newbalanceOrig=2, oldbalanceDest=3 -> P(delta_orig=0)=0.1243  P(delta_orig=1)=0.1833  P(delta_orig=2)=0.2505  P(delta_orig=3)=0.3180  P(delta_orig=4)=0.1239
+  newbalanceDest=3, newbalanceOrig=2, oldbalanceDest=4 -> P(delta_orig=0)=0.1090  P(delta_orig=1)=0.1752  P(delta_orig=2)=0.0665  P(delta_orig=3)=0.3499  P(delta_orig=4)=0.2994
+  newbalanceDest=3, newbalanceOrig=3, oldbalanceDest=0 -> P(delta_orig=0)=0.1847  P(delta_orig=1)=0.1975  P(delta_orig=2)=0.1072  P(delta_orig=3)=0.0924  P(delta_orig=4)=0.4182
+  newbalanceDest=3, newbalanceOrig=3, oldbalanceDest=1 -> P(delta_orig=0)=0.2406  P(delta_orig=1)=0.1717  P(delta_orig=2)=0.0972  P(delta_orig=3)=0.2384  P(delta_orig=4)=0.2522
+  newbalanceDest=3, newbalanceOrig=3, oldbalanceDest=2 -> P(delta_orig=0)=0.1604  P(delta_orig=1)=0.2413  P(delta_orig=2)=0.1207  P(delta_orig=3)=0.3826  P(delta_orig=4)=0.0950
+  newbalanceDest=3, newbalanceOrig=3, oldbalanceDest=3 -> P(delta_orig=0)=0.2314  P(delta_orig=1)=0.2535  P(delta_orig=2)=0.2858  P(delta_orig=3)=0.1845  P(delta_orig=4)=0.0448
+  newbalanceDest=3, newbalanceOrig=3, oldbalanceDest=4 -> P(delta_orig=0)=0.0723  P(delta_orig=1)=0.2114  P(delta_orig=2)=0.0429  P(delta_orig=3)=0.2061  P(delta_orig=4)=0.4673
+  newbalanceDest=3, newbalanceOrig=4, oldbalanceDest=0 -> P(delta_orig=0)=0.3886  P(delta_orig=1)=0.1911  P(delta_orig=2)=0.1129  P(delta_orig=3)=0.1205  P(delta_orig=4)=0.1869
+  newbalanceDest=3, newbalanceOrig=4, oldbalanceDest=1 -> P(delta_orig=0)=0.1363  P(delta_orig=1)=0.1565  P(delta_orig=2)=0.2675  P(delta_orig=3)=0.3210  P(delta_orig=4)=0.1187
+  newbalanceDest=3, newbalanceOrig=4, oldbalanceDest=2 -> P(delta_orig=0)=0.1115  P(delta_orig=1)=0.3099  P(delta_orig=2)=0.0695  P(delta_orig=3)=0.0857  P(delta_orig=4)=0.4233
+  newbalanceDest=3, newbalanceOrig=4, oldbalanceDest=3 -> P(delta_orig=0)=0.1753  P(delta_orig=1)=0.1506  P(delta_orig=2)=0.3672  P(delta_orig=3)=0.1672  P(delta_orig=4)=0.1398
+  newbalanceDest=3, newbalanceOrig=4, oldbalanceDest=4 -> P(delta_orig=0)=0.2234  P(delta_orig=1)=0.1536  P(delta_orig=2)=0.3376  P(delta_orig=3)=0.2152  P(delta_orig=4)=0.0703
+  newbalanceDest=4, newbalanceOrig=0, oldbalanceDest=0 -> P(delta_orig=0)=0.1974  P(delta_orig=1)=0.1633  P(delta_orig=2)=0.3666  P(delta_orig=3)=0.0099  P(delta_orig=4)=0.2628
+  newbalanceDest=4, newbalanceOrig=0, oldbalanceDest=1 -> P(delta_orig=0)=0.2732  P(delta_orig=1)=0.0635  P(delta_orig=2)=0.3066  P(delta_orig=3)=0.1837  P(delta_orig=4)=0.1730
+  newbalanceDest=4, newbalanceOrig=0, oldbalanceDest=2 -> P(delta_orig=0)=0.2134  P(delta_orig=1)=0.2476  P(delta_orig=2)=0.2121  P(delta_orig=3)=0.1315  P(delta_orig=4)=0.1954
+  newbalanceDest=4, newbalanceOrig=0, oldbalanceDest=3 -> P(delta_orig=0)=0.1775  P(delta_orig=1)=0.3203  P(delta_orig=2)=0.1014  P(delta_orig=3)=0.1519  P(delta_orig=4)=0.2490
+  newbalanceDest=4, newbalanceOrig=0, oldbalanceDest=4 -> P(delta_orig=0)=0.4134  P(delta_orig=1)=0.0207  P(delta_orig=2)=0.1477  P(delta_orig=3)=0.3122  P(delta_orig=4)=0.1060
+  newbalanceDest=4, newbalanceOrig=1, oldbalanceDest=0 -> P(delta_orig=0)=0.1028  P(delta_orig=1)=0.2083  P(delta_orig=2)=0.3259  P(delta_orig=3)=0.1118  P(delta_orig=4)=0.2512
+  newbalanceDest=4, newbalanceOrig=1, oldbalanceDest=1 -> P(delta_orig=0)=0.0370  P(delta_orig=1)=0.1490  P(delta_orig=2)=0.4862  P(delta_orig=3)=0.0272  P(delta_orig=4)=0.3007
+  newbalanceDest=4, newbalanceOrig=1, oldbalanceDest=2 -> P(delta_orig=0)=0.2035  P(delta_orig=1)=0.1757  P(delta_orig=2)=0.0596  P(delta_orig=3)=0.1820  P(delta_orig=4)=0.3792
+  newbalanceDest=4, newbalanceOrig=1, oldbalanceDest=3 -> P(delta_orig=0)=0.1445  P(delta_orig=1)=0.1903  P(delta_orig=2)=0.1293  P(delta_orig=3)=0.3540  P(delta_orig=4)=0.1819
+  newbalanceDest=4, newbalanceOrig=1, oldbalanceDest=4 -> P(delta_orig=0)=0.4323  P(delta_orig=1)=0.3720  P(delta_orig=2)=0.0429  P(delta_orig=3)=0.0567  P(delta_orig=4)=0.0961
+  newbalanceDest=4, newbalanceOrig=2, oldbalanceDest=0 -> P(delta_orig=0)=0.0907  P(delta_orig=1)=0.3574  P(delta_orig=2)=0.0948  P(delta_orig=3)=0.1519  P(delta_orig=4)=0.3053
+  newbalanceDest=4, newbalanceOrig=2, oldbalanceDest=1 -> P(delta_orig=0)=0.0179  P(delta_orig=1)=0.1960  P(delta_orig=2)=0.1418  P(delta_orig=3)=0.4466  P(delta_orig=4)=0.1978
+  newbalanceDest=4, newbalanceOrig=2, oldbalanceDest=2 -> P(delta_orig=0)=0.2995  P(delta_orig=1)=0.0632  P(delta_orig=2)=0.2157  P(delta_orig=3)=0.3549  P(delta_orig=4)=0.0667
+  newbalanceDest=4, newbalanceOrig=2, oldbalanceDest=3 -> P(delta_orig=0)=0.1440  P(delta_orig=1)=0.5385  P(delta_orig=2)=0.1707  P(delta_orig=3)=0.0967  P(delta_orig=4)=0.0500
+  newbalanceDest=4, newbalanceOrig=2, oldbalanceDest=4 -> P(delta_orig=0)=0.3089  P(delta_orig=1)=0.0460  P(delta_orig=2)=0.2202  P(delta_orig=3)=0.3179  P(delta_orig=4)=0.1070
+  newbalanceDest=4, newbalanceOrig=3, oldbalanceDest=0 -> P(delta_orig=0)=0.0811  P(delta_orig=1)=0.2152  P(delta_orig=2)=0.1993  P(delta_orig=3)=0.2933  P(delta_orig=4)=0.2111
+  newbalanceDest=4, newbalanceOrig=3, oldbalanceDest=1 -> P(delta_orig=0)=0.1405  P(delta_orig=1)=0.2347  P(delta_orig=2)=0.0536  P(delta_orig=3)=0.2499  P(delta_orig=4)=0.3214
+  newbalanceDest=4, newbalanceOrig=3, oldbalanceDest=2 -> P(delta_orig=0)=0.2163  P(delta_orig=1)=0.0299  P(delta_orig=2)=0.1804  P(delta_orig=3)=0.3127  P(delta_orig=4)=0.2606
+  newbalanceDest=4, newbalanceOrig=3, oldbalanceDest=3 -> P(delta_orig=0)=0.5369  P(delta_orig=1)=0.0062  P(delta_orig=2)=0.2437  P(delta_orig=3)=0.1354  P(delta_orig=4)=0.0778
+  newbalanceDest=4, newbalanceOrig=3, oldbalanceDest=4 -> P(delta_orig=0)=0.0487  P(delta_orig=1)=0.4195  P(delta_orig=2)=0.1772  P(delta_orig=3)=0.1415  P(delta_orig=4)=0.2131
+  newbalanceDest=4, newbalanceOrig=4, oldbalanceDest=0 -> P(delta_orig=0)=0.2177  P(delta_orig=1)=0.0642  P(delta_orig=2)=0.1409  P(delta_orig=3)=0.4034  P(delta_orig=4)=0.1738
+  newbalanceDest=4, newbalanceOrig=4, oldbalanceDest=1 -> P(delta_orig=0)=0.1196  P(delta_orig=1)=0.1760  P(delta_orig=2)=0.2404  P(delta_orig=3)=0.2055  P(delta_orig=4)=0.2585
+  newbalanceDest=4, newbalanceOrig=4, oldbalanceDest=2 -> P(delta_orig=0)=0.1524  P(delta_orig=1)=0.2000  P(delta_orig=2)=0.1649  P(delta_orig=3)=0.2721  P(delta_orig=4)=0.2105
+  newbalanceDest=4, newbalanceOrig=4, oldbalanceDest=3 -> P(delta_orig=0)=0.0263  P(delta_orig=1)=0.1250  P(delta_orig=2)=0.1264  P(delta_orig=3)=0.4131  P(delta_orig=4)=0.3092
+  newbalanceDest=4, newbalanceOrig=4, oldbalanceDest=4 -> P(delta_orig=0)=0.3223  P(delta_orig=1)=0.2058  P(delta_orig=2)=0.1213  P(delta_orig=3)=0.2462  P(delta_orig=4)=0.1045
+
+Node: delta_dest  (states: 5)
+Parents: amount, newbalanceDest, type
+------------------------------------------------------------------------------
+  amount=0, newbalanceDest=0, type=0       -> P(delta_dest=0)=0.1651  P(delta_dest=1)=0.0092  P(delta_dest=2)=0.1429  P(delta_dest=3)=0.3717  P(delta_dest=4)=0.3111
+  amount=0, newbalanceDest=0, type=1       -> P(delta_dest=0)=0.0736  P(delta_dest=1)=0.0435  P(delta_dest=2)=0.4525  P(delta_dest=3)=0.2754  P(delta_dest=4)=0.1549
+  amount=0, newbalanceDest=0, type=2       -> P(delta_dest=0)=0.2905  P(delta_dest=1)=0.0791  P(delta_dest=2)=0.2763  P(delta_dest=3)=0.0626  P(delta_dest=4)=0.2915
+  amount=0, newbalanceDest=0, type=3       -> P(delta_dest=0)=0.0946  P(delta_dest=1)=0.1494  P(delta_dest=2)=0.1534  P(delta_dest=3)=0.4209  P(delta_dest=4)=0.1817
+  amount=0, newbalanceDest=0, type=4       -> P(delta_dest=0)=0.3383  P(delta_dest=1)=0.2378  P(delta_dest=2)=0.1545  P(delta_dest=3)=0.1349  P(delta_dest=4)=0.1345
+  amount=0, newbalanceDest=1, type=0       -> P(delta_dest=0)=0.1643  P(delta_dest=1)=0.2815  P(delta_dest=2)=0.2875  P(delta_dest=3)=0.0805  P(delta_dest=4)=0.1863
+  amount=0, newbalanceDest=1, type=1       -> P(delta_dest=0)=0.0818  P(delta_dest=1)=0.2928  P(delta_dest=2)=0.0878  P(delta_dest=3)=0.3177  P(delta_dest=4)=0.2200
+  amount=0, newbalanceDest=1, type=2       -> P(delta_dest=0)=0.0677  P(delta_dest=1)=0.1851  P(delta_dest=2)=0.0769  P(delta_dest=3)=0.5810  P(delta_dest=4)=0.0892
+  amount=0, newbalanceDest=1, type=3       -> P(delta_dest=0)=0.2003  P(delta_dest=1)=0.2679  P(delta_dest=2)=0.0577  P(delta_dest=3)=0.3931  P(delta_dest=4)=0.0811
+  amount=0, newbalanceDest=1, type=4       -> P(delta_dest=0)=0.2592  P(delta_dest=1)=0.1043  P(delta_dest=2)=0.1727  P(delta_dest=3)=0.1452  P(delta_dest=4)=0.3186
+  amount=0, newbalanceDest=2, type=0       -> P(delta_dest=0)=0.0225  P(delta_dest=1)=0.1291  P(delta_dest=2)=0.2931  P(delta_dest=3)=0.0514  P(delta_dest=4)=0.5039
+  amount=0, newbalanceDest=2, type=1       -> P(delta_dest=0)=0.3601  P(delta_dest=1)=0.1810  P(delta_dest=2)=0.2868  P(delta_dest=3)=0.1492  P(delta_dest=4)=0.0228
+  amount=0, newbalanceDest=2, type=2       -> P(delta_dest=0)=0.1499  P(delta_dest=1)=0.0294  P(delta_dest=2)=0.1693  P(delta_dest=3)=0.2180  P(delta_dest=4)=0.4334
+  amount=0, newbalanceDest=2, type=3       -> P(delta_dest=0)=0.0139  P(delta_dest=1)=0.2018  P(delta_dest=2)=0.2899  P(delta_dest=3)=0.4331  P(delta_dest=4)=0.0613
+  amount=0, newbalanceDest=2, type=4       -> P(delta_dest=0)=0.0973  P(delta_dest=1)=0.3336  P(delta_dest=2)=0.0749  P(delta_dest=3)=0.3963  P(delta_dest=4)=0.0979
+  amount=0, newbalanceDest=3, type=0       -> P(delta_dest=0)=0.2481  P(delta_dest=1)=0.0608  P(delta_dest=2)=0.3669  P(delta_dest=3)=0.2338  P(delta_dest=4)=0.0904
+  amount=0, newbalanceDest=3, type=1       -> P(delta_dest=0)=0.3549  P(delta_dest=1)=0.1063  P(delta_dest=2)=0.1414  P(delta_dest=3)=0.2222  P(delta_dest=4)=0.1754
+  amount=0, newbalanceDest=3, type=2       -> P(delta_dest=0)=0.2774  P(delta_dest=1)=0.1737  P(delta_dest=2)=0.1109  P(delta_dest=3)=0.1793  P(delta_dest=4)=0.2587
+  amount=0, newbalanceDest=3, type=3       -> P(delta_dest=0)=0.1720  P(delta_dest=1)=0.0666  P(delta_dest=2)=0.1060  P(delta_dest=3)=0.1690  P(delta_dest=4)=0.4864
+  amount=0, newbalanceDest=3, type=4       -> P(delta_dest=0)=0.1795  P(delta_dest=1)=0.2317  P(delta_dest=2)=0.0655  P(delta_dest=3)=0.2182  P(delta_dest=4)=0.3051
+  amount=0, newbalanceDest=4, type=0       -> P(delta_dest=0)=0.1851  P(delta_dest=1)=0.0945  P(delta_dest=2)=0.1676  P(delta_dest=3)=0.0828  P(delta_dest=4)=0.4700
+  amount=0, newbalanceDest=4, type=1       -> P(delta_dest=0)=0.2848  P(delta_dest=1)=0.1592  P(delta_dest=2)=0.1362  P(delta_dest=3)=0.3849  P(delta_dest=4)=0.0349
+  amount=0, newbalanceDest=4, type=2       -> P(delta_dest=0)=0.3958  P(delta_dest=1)=0.3036  P(delta_dest=2)=0.0443  P(delta_dest=3)=0.2010  P(delta_dest=4)=0.0554
+  amount=0, newbalanceDest=4, type=3       -> P(delta_dest=0)=0.0488  P(delta_dest=1)=0.0280  P(delta_dest=2)=0.0430  P(delta_dest=3)=0.4867  P(delta_dest=4)=0.3935
+  amount=0, newbalanceDest=4, type=4       -> P(delta_dest=0)=0.1582  P(delta_dest=1)=0.0649  P(delta_dest=2)=0.3497  P(delta_dest=3)=0.2655  P(delta_dest=4)=0.1616
+  amount=1, newbalanceDest=0, type=0       -> P(delta_dest=0)=0.1159  P(delta_dest=1)=0.2484  P(delta_dest=2)=0.0088  P(delta_dest=3)=0.2513  P(delta_dest=4)=0.3756
+  amount=1, newbalanceDest=0, type=1       -> P(delta_dest=0)=0.2226  P(delta_dest=1)=0.0436  P(delta_dest=2)=0.3686  P(delta_dest=3)=0.0587  P(delta_dest=4)=0.3065
+  amount=1, newbalanceDest=0, type=2       -> P(delta_dest=0)=0.2524  P(delta_dest=1)=0.2768  P(delta_dest=2)=0.2826  P(delta_dest=3)=0.1480  P(delta_dest=4)=0.0402
+  amount=1, newbalanceDest=0, type=3       -> P(delta_dest=0)=0.3828  P(delta_dest=1)=0.2533  P(delta_dest=2)=0.2050  P(delta_dest=3)=0.0488  P(delta_dest=4)=0.1101
+  amount=1, newbalanceDest=0, type=4       -> P(delta_dest=0)=0.1393  P(delta_dest=1)=0.4932  P(delta_dest=2)=0.0383  P(delta_dest=3)=0.0893  P(delta_dest=4)=0.2399
+  amount=1, newbalanceDest=1, type=0       -> P(delta_dest=0)=0.0736  P(delta_dest=1)=0.3980  P(delta_dest=2)=0.0307  P(delta_dest=3)=0.0414  P(delta_dest=4)=0.4563
+  amount=1, newbalanceDest=1, type=1       -> P(delta_dest=0)=0.1646  P(delta_dest=1)=0.2722  P(delta_dest=2)=0.3064  P(delta_dest=3)=0.2353  P(delta_dest=4)=0.0214
+  amount=1, newbalanceDest=1, type=2       -> P(delta_dest=0)=0.1282  P(delta_dest=1)=0.1643  P(delta_dest=2)=0.2717  P(delta_dest=3)=0.3133  P(delta_dest=4)=0.1225
+  amount=1, newbalanceDest=1, type=3       -> P(delta_dest=0)=0.1777  P(delta_dest=1)=0.3075  P(delta_dest=2)=0.2943  P(delta_dest=3)=0.1437  P(delta_dest=4)=0.0769
+  amount=1, newbalanceDest=1, type=4       -> P(delta_dest=0)=0.1532  P(delta_dest=1)=0.3325  P(delta_dest=2)=0.1998  P(delta_dest=3)=0.0241  P(delta_dest=4)=0.2904
+  amount=1, newbalanceDest=2, type=0       -> P(delta_dest=0)=0.1794  P(delta_dest=1)=0.2243  P(delta_dest=2)=0.3307  P(delta_dest=3)=0.1875  P(delta_dest=4)=0.0781
+  amount=1, newbalanceDest=2, type=1       -> P(delta_dest=0)=0.1640  P(delta_dest=1)=0.1331  P(delta_dest=2)=0.2599  P(delta_dest=3)=0.0583  P(delta_dest=4)=0.3847
+  amount=1, newbalanceDest=2, type=2       -> P(delta_dest=0)=0.1055  P(delta_dest=1)=0.1000  P(delta_dest=2)=0.3699  P(delta_dest=3)=0.3277  P(delta_dest=4)=0.0970
+  amount=1, newbalanceDest=2, type=3       -> P(delta_dest=0)=0.0709  P(delta_dest=1)=0.2538  P(delta_dest=2)=0.1912  P(delta_dest=3)=0.1094  P(delta_dest=4)=0.3746
+  amount=1, newbalanceDest=2, type=4       -> P(delta_dest=0)=0.2333  P(delta_dest=1)=0.1309  P(delta_dest=2)=0.3777  P(delta_dest=3)=0.0821  P(delta_dest=4)=0.1761
+  amount=1, newbalanceDest=3, type=0       -> P(delta_dest=0)=0.3524  P(delta_dest=1)=0.1946  P(delta_dest=2)=0.2074  P(delta_dest=3)=0.1117  P(delta_dest=4)=0.1339
+  amount=1, newbalanceDest=3, type=1       -> P(delta_dest=0)=0.1149  P(delta_dest=1)=0.3967  P(delta_dest=2)=0.1136  P(delta_dest=3)=0.1081  P(delta_dest=4)=0.2667
+  amount=1, newbalanceDest=3, type=2       -> P(delta_dest=0)=0.3341  P(delta_dest=1)=0.0672  P(delta_dest=2)=0.3234  P(delta_dest=3)=0.2579  P(delta_dest=4)=0.0174
+  amount=1, newbalanceDest=3, type=3       -> P(delta_dest=0)=0.1752  P(delta_dest=1)=0.0602  P(delta_dest=2)=0.1556  P(delta_dest=3)=0.1154  P(delta_dest=4)=0.4936
+  amount=1, newbalanceDest=3, type=4       -> P(delta_dest=0)=0.2373  P(delta_dest=1)=0.1216  P(delta_dest=2)=0.1864  P(delta_dest=3)=0.2955  P(delta_dest=4)=0.1592
+  amount=1, newbalanceDest=4, type=0       -> P(delta_dest=0)=0.4369  P(delta_dest=1)=0.1528  P(delta_dest=2)=0.1931  P(delta_dest=3)=0.1355  P(delta_dest=4)=0.0817
+  amount=1, newbalanceDest=4, type=1       -> P(delta_dest=0)=0.0745  P(delta_dest=1)=0.1010  P(delta_dest=2)=0.2287  P(delta_dest=3)=0.2582  P(delta_dest=4)=0.3376
+  amount=1, newbalanceDest=4, type=2       -> P(delta_dest=0)=0.0896  P(delta_dest=1)=0.2843  P(delta_dest=2)=0.3719  P(delta_dest=3)=0.0749  P(delta_dest=4)=0.1794
+  amount=1, newbalanceDest=4, type=3       -> P(delta_dest=0)=0.0357  P(delta_dest=1)=0.3128  P(delta_dest=2)=0.4797  P(delta_dest=3)=0.0556  P(delta_dest=4)=0.1161
+  amount=1, newbalanceDest=4, type=4       -> P(delta_dest=0)=0.1092  P(delta_dest=1)=0.0823  P(delta_dest=2)=0.2085  P(delta_dest=3)=0.2834  P(delta_dest=4)=0.3166
+  amount=2, newbalanceDest=0, type=0       -> P(delta_dest=0)=0.1905  P(delta_dest=1)=0.3149  P(delta_dest=2)=0.1048  P(delta_dest=3)=0.0805  P(delta_dest=4)=0.3092
+  amount=2, newbalanceDest=0, type=1       -> P(delta_dest=0)=0.1560  P(delta_dest=1)=0.1011  P(delta_dest=2)=0.3842  P(delta_dest=3)=0.1226  P(delta_dest=4)=0.2359
+  amount=2, newbalanceDest=0, type=2       -> P(delta_dest=0)=0.0910  P(delta_dest=1)=0.2104  P(delta_dest=2)=0.2259  P(delta_dest=3)=0.3593  P(delta_dest=4)=0.1135
+  amount=2, newbalanceDest=0, type=3       -> P(delta_dest=0)=0.1845  P(delta_dest=1)=0.2220  P(delta_dest=2)=0.1680  P(delta_dest=3)=0.0903  P(delta_dest=4)=0.3353
+  amount=2, newbalanceDest=0, type=4       -> P(delta_dest=0)=0.3492  P(delta_dest=1)=0.0761  P(delta_dest=2)=0.1172  P(delta_dest=3)=0.2503  P(delta_dest=4)=0.2072
+  amount=2, newbalanceDest=1, type=0       -> P(delta_dest=0)=0.0382  P(delta_dest=1)=0.0491  P(delta_dest=2)=0.3593  P(delta_dest=3)=0.2520  P(delta_dest=4)=0.3014
+  amount=2, newbalanceDest=1, type=1       -> P(delta_dest=0)=0.4198  P(delta_dest=1)=0.1177  P(delta_dest=2)=0.2292  P(delta_dest=3)=0.0148  P(delta_dest=4)=0.2187
+  amount=2, newbalanceDest=1, type=2       -> P(delta_dest=0)=0.1298  P(delta_dest=1)=0.1655  P(delta_dest=2)=0.3028  P(delta_dest=3)=0.2423  P(delta_dest=4)=0.1596
+  amount=2, newbalanceDest=1, type=3       -> P(delta_dest=0)=0.1963  P(delta_dest=1)=0.1290  P(delta_dest=2)=0.0858  P(delta_dest=3)=0.0807  P(delta_dest=4)=0.5082
+  amount=2, newbalanceDest=1, type=4       -> P(delta_dest=0)=0.1233  P(delta_dest=1)=0.3800  P(delta_dest=2)=0.2413  P(delta_dest=3)=0.1993  P(delta_dest=4)=0.0562
+  amount=2, newbalanceDest=2, type=0       -> P(delta_dest=0)=0.0826  P(delta_dest=1)=0.2418  P(delta_dest=2)=0.2293  P(delta_dest=3)=0.1537  P(delta_dest=4)=0.2925
+  amount=2, newbalanceDest=2, type=1       -> P(delta_dest=0)=0.1446  P(delta_dest=1)=0.1258  P(delta_dest=2)=0.2491  P(delta_dest=3)=0.3626  P(delta_dest=4)=0.1179
+  amount=2, newbalanceDest=2, type=2       -> P(delta_dest=0)=0.1069  P(delta_dest=1)=0.4341  P(delta_dest=2)=0.1550  P(delta_dest=3)=0.2328  P(delta_dest=4)=0.0712
+  amount=2, newbalanceDest=2, type=3       -> P(delta_dest=0)=0.1193  P(delta_dest=1)=0.1833  P(delta_dest=2)=0.2582  P(delta_dest=3)=0.2729  P(delta_dest=4)=0.1663
+  amount=2, newbalanceDest=2, type=4       -> P(delta_dest=0)=0.1812  P(delta_dest=1)=0.1708  P(delta_dest=2)=0.3590  P(delta_dest=3)=0.0705  P(delta_dest=4)=0.2185
+  amount=2, newbalanceDest=3, type=0       -> P(delta_dest=0)=0.2500  P(delta_dest=1)=0.1669  P(delta_dest=2)=0.0924  P(delta_dest=3)=0.2901  P(delta_dest=4)=0.2005
+  amount=2, newbalanceDest=3, type=1       -> P(delta_dest=0)=0.2027  P(delta_dest=1)=0.0606  P(delta_dest=2)=0.2104  P(delta_dest=3)=0.2006  P(delta_dest=4)=0.3257
+  amount=2, newbalanceDest=3, type=2       -> P(delta_dest=0)=0.3952  P(delta_dest=1)=0.2045  P(delta_dest=2)=0.0952  P(delta_dest=3)=0.1760  P(delta_dest=4)=0.1292
+  amount=2, newbalanceDest=3, type=3       -> P(delta_dest=0)=0.2854  P(delta_dest=1)=0.0464  P(delta_dest=2)=0.4448  P(delta_dest=3)=0.1139  P(delta_dest=4)=0.1095
+  amount=2, newbalanceDest=3, type=4       -> P(delta_dest=0)=0.1682  P(delta_dest=1)=0.1376  P(delta_dest=2)=0.2145  P(delta_dest=3)=0.1803  P(delta_dest=4)=0.2993
+  amount=2, newbalanceDest=4, type=0       -> P(delta_dest=0)=0.1508  P(delta_dest=1)=0.1972  P(delta_dest=2)=0.4868  P(delta_dest=3)=0.0922  P(delta_dest=4)=0.0731
+  amount=2, newbalanceDest=4, type=1       -> P(delta_dest=0)=0.4902  P(delta_dest=1)=0.1023  P(delta_dest=2)=0.2104  P(delta_dest=3)=0.1641  P(delta_dest=4)=0.0331
+  amount=2, newbalanceDest=4, type=2       -> P(delta_dest=0)=0.2361  P(delta_dest=1)=0.3334  P(delta_dest=2)=0.2503  P(delta_dest=3)=0.1416  P(delta_dest=4)=0.0387
+  amount=2, newbalanceDest=4, type=3       -> P(delta_dest=0)=0.2161  P(delta_dest=1)=0.2414  P(delta_dest=2)=0.0630  P(delta_dest=3)=0.2128  P(delta_dest=4)=0.2667
+  amount=2, newbalanceDest=4, type=4       -> P(delta_dest=0)=0.2104  P(delta_dest=1)=0.2666  P(delta_dest=2)=0.3233  P(delta_dest=3)=0.0972  P(delta_dest=4)=0.1026
+  amount=3, newbalanceDest=0, type=0       -> P(delta_dest=0)=0.1571  P(delta_dest=1)=0.3621  P(delta_dest=2)=0.3424  P(delta_dest=3)=0.0259  P(delta_dest=4)=0.1126
+  amount=3, newbalanceDest=0, type=1       -> P(delta_dest=0)=0.1415  P(delta_dest=1)=0.1769  P(delta_dest=2)=0.0592  P(delta_dest=3)=0.2953  P(delta_dest=4)=0.3272
+  amount=3, newbalanceDest=0, type=2       -> P(delta_dest=0)=0.1376  P(delta_dest=1)=0.1869  P(delta_dest=2)=0.2036  P(delta_dest=3)=0.2745  P(delta_dest=4)=0.1974
+  amount=3, newbalanceDest=0, type=3       -> P(delta_dest=0)=0.2604  P(delta_dest=1)=0.0976  P(delta_dest=2)=0.1312  P(delta_dest=3)=0.2417  P(delta_dest=4)=0.2690
+  amount=3, newbalanceDest=0, type=4       -> P(delta_dest=0)=0.4626  P(delta_dest=1)=0.2262  P(delta_dest=2)=0.0573  P(delta_dest=3)=0.1303  P(delta_dest=4)=0.1236
+  amount=3, newbalanceDest=1, type=0       -> P(delta_dest=0)=0.1622  P(delta_dest=1)=0.2147  P(delta_dest=2)=0.1269  P(delta_dest=3)=0.4365  P(delta_dest=4)=0.0598
+  amount=3, newbalanceDest=1, type=1       -> P(delta_dest=0)=0.1120  P(delta_dest=1)=0.3807  P(delta_dest=2)=0.0709  P(delta_dest=3)=0.0721  P(delta_dest=4)=0.3643
+  amount=3, newbalanceDest=1, type=2       -> P(delta_dest=0)=0.2196  P(delta_dest=1)=0.1603  P(delta_dest=2)=0.1589  P(delta_dest=3)=0.3563  P(delta_dest=4)=0.1049
+  amount=3, newbalanceDest=1, type=3       -> P(delta_dest=0)=0.0848  P(delta_dest=1)=0.0909  P(delta_dest=2)=0.3606  P(delta_dest=3)=0.1433  P(delta_dest=4)=0.3203
+  amount=3, newbalanceDest=1, type=4       -> P(delta_dest=0)=0.0538  P(delta_dest=1)=0.2129  P(delta_dest=2)=0.5494  P(delta_dest=3)=0.1819  P(delta_dest=4)=0.0020
+  amount=3, newbalanceDest=2, type=0       -> P(delta_dest=0)=0.3271  P(delta_dest=1)=0.0779  P(delta_dest=2)=0.0256  P(delta_dest=3)=0.0145  P(delta_dest=4)=0.5549
+  amount=3, newbalanceDest=2, type=1       -> P(delta_dest=0)=0.2786  P(delta_dest=1)=0.1580  P(delta_dest=2)=0.2005  P(delta_dest=3)=0.0509  P(delta_dest=4)=0.3119
+  amount=3, newbalanceDest=2, type=2       -> P(delta_dest=0)=0.1627  P(delta_dest=1)=0.0397  P(delta_dest=2)=0.1348  P(delta_dest=3)=0.4852  P(delta_dest=4)=0.1776
+  amount=3, newbalanceDest=2, type=3       -> P(delta_dest=0)=0.1973  P(delta_dest=1)=0.0638  P(delta_dest=2)=0.3540  P(delta_dest=3)=0.2709  P(delta_dest=4)=0.1139
+  amount=3, newbalanceDest=2, type=4       -> P(delta_dest=0)=0.2121  P(delta_dest=1)=0.0511  P(delta_dest=2)=0.1717  P(delta_dest=3)=0.1265  P(delta_dest=4)=0.4386
+  amount=3, newbalanceDest=3, type=0       -> P(delta_dest=0)=0.0971  P(delta_dest=1)=0.4224  P(delta_dest=2)=0.0947  P(delta_dest=3)=0.1391  P(delta_dest=4)=0.2467
+  amount=3, newbalanceDest=3, type=1       -> P(delta_dest=0)=0.3662  P(delta_dest=1)=0.0209  P(delta_dest=2)=0.2906  P(delta_dest=3)=0.2774  P(delta_dest=4)=0.0449
+  amount=3, newbalanceDest=3, type=2       -> P(delta_dest=0)=0.3160  P(delta_dest=1)=0.0376  P(delta_dest=2)=0.2483  P(delta_dest=3)=0.1436  P(delta_dest=4)=0.2545
+  amount=3, newbalanceDest=3, type=3       -> P(delta_dest=0)=0.2127  P(delta_dest=1)=0.1678  P(delta_dest=2)=0.1865  P(delta_dest=3)=0.0551  P(delta_dest=4)=0.3779
+  amount=3, newbalanceDest=3, type=4       -> P(delta_dest=0)=0.0676  P(delta_dest=1)=0.2232  P(delta_dest=2)=0.2142  P(delta_dest=3)=0.3707  P(delta_dest=4)=0.1243
+  amount=3, newbalanceDest=4, type=0       -> P(delta_dest=0)=0.0514  P(delta_dest=1)=0.1760  P(delta_dest=2)=0.2363  P(delta_dest=3)=0.1725  P(delta_dest=4)=0.3637
+  amount=3, newbalanceDest=4, type=1       -> P(delta_dest=0)=0.1769  P(delta_dest=1)=0.0218  P(delta_dest=2)=0.0806  P(delta_dest=3)=0.4962  P(delta_dest=4)=0.2246
+  amount=3, newbalanceDest=4, type=2       -> P(delta_dest=0)=0.1196  P(delta_dest=1)=0.3181  P(delta_dest=2)=0.2538  P(delta_dest=3)=0.2730  P(delta_dest=4)=0.0355
+  amount=3, newbalanceDest=4, type=3       -> P(delta_dest=0)=0.4411  P(delta_dest=1)=0.0819  P(delta_dest=2)=0.1375  P(delta_dest=3)=0.1521  P(delta_dest=4)=0.1874
+  amount=3, newbalanceDest=4, type=4       -> P(delta_dest=0)=0.1101  P(delta_dest=1)=0.1176  P(delta_dest=2)=0.1947  P(delta_dest=3)=0.3378  P(delta_dest=4)=0.2398
+  amount=4, newbalanceDest=0, type=0       -> P(delta_dest=0)=0.0446  P(delta_dest=1)=0.1352  P(delta_dest=2)=0.2444  P(delta_dest=3)=0.2072  P(delta_dest=4)=0.3686
+  amount=4, newbalanceDest=0, type=1       -> P(delta_dest=0)=0.1883  P(delta_dest=1)=0.1039  P(delta_dest=2)=0.2930  P(delta_dest=3)=0.1858  P(delta_dest=4)=0.2290
+  amount=4, newbalanceDest=0, type=2       -> P(delta_dest=0)=0.3719  P(delta_dest=1)=0.1743  P(delta_dest=2)=0.2998  P(delta_dest=3)=0.0937  P(delta_dest=4)=0.0604
+  amount=4, newbalanceDest=0, type=3       -> P(delta_dest=0)=0.1074  P(delta_dest=1)=0.0966  P(delta_dest=2)=0.2223  P(delta_dest=3)=0.2894  P(delta_dest=4)=0.2843
+  amount=4, newbalanceDest=0, type=4       -> P(delta_dest=0)=0.0320  P(delta_dest=1)=0.1508  P(delta_dest=2)=0.2954  P(delta_dest=3)=0.3029  P(delta_dest=4)=0.2190
+  amount=4, newbalanceDest=1, type=0       -> P(delta_dest=0)=0.1007  P(delta_dest=1)=0.4086  P(delta_dest=2)=0.2878  P(delta_dest=3)=0.0787  P(delta_dest=4)=0.1241
+  amount=4, newbalanceDest=1, type=1       -> P(delta_dest=0)=0.3285  P(delta_dest=1)=0.0376  P(delta_dest=2)=0.2157  P(delta_dest=3)=0.2122  P(delta_dest=4)=0.2060
+  amount=4, newbalanceDest=1, type=2       -> P(delta_dest=0)=0.3543  P(delta_dest=1)=0.1420  P(delta_dest=2)=0.0218  P(delta_dest=3)=0.3754  P(delta_dest=4)=0.1065
+  amount=4, newbalanceDest=1, type=3       -> P(delta_dest=0)=0.0798  P(delta_dest=1)=0.1126  P(delta_dest=2)=0.5153  P(delta_dest=3)=0.0392  P(delta_dest=4)=0.2530
+  amount=4, newbalanceDest=1, type=4       -> P(delta_dest=0)=0.1728  P(delta_dest=1)=0.3385  P(delta_dest=2)=0.0617  P(delta_dest=3)=0.2174  P(delta_dest=4)=0.2096
+  amount=4, newbalanceDest=2, type=0       -> P(delta_dest=0)=0.3047  P(delta_dest=1)=0.1026  P(delta_dest=2)=0.1947  P(delta_dest=3)=0.3787  P(delta_dest=4)=0.0193
+  amount=4, newbalanceDest=2, type=1       -> P(delta_dest=0)=0.0576  P(delta_dest=1)=0.2325  P(delta_dest=2)=0.2783  P(delta_dest=3)=0.1815  P(delta_dest=4)=0.2501
+  amount=4, newbalanceDest=2, type=2       -> P(delta_dest=0)=0.0969  P(delta_dest=1)=0.3295  P(delta_dest=2)=0.4484  P(delta_dest=3)=0.0431  P(delta_dest=4)=0.0822
+  amount=4, newbalanceDest=2, type=3       -> P(delta_dest=0)=0.1827  P(delta_dest=1)=0.0780  P(delta_dest=2)=0.1562  P(delta_dest=3)=0.5158  P(delta_dest=4)=0.0672
+  amount=4, newbalanceDest=2, type=4       -> P(delta_dest=0)=0.1178  P(delta_dest=1)=0.0048  P(delta_dest=2)=0.3754  P(delta_dest=3)=0.2428  P(delta_dest=4)=0.2592
+  amount=4, newbalanceDest=3, type=0       -> P(delta_dest=0)=0.1782  P(delta_dest=1)=0.1172  P(delta_dest=2)=0.3089  P(delta_dest=3)=0.0516  P(delta_dest=4)=0.3441
+  amount=4, newbalanceDest=3, type=1       -> P(delta_dest=0)=0.1114  P(delta_dest=1)=0.1564  P(delta_dest=2)=0.2177  P(delta_dest=3)=0.2167  P(delta_dest=4)=0.2977
+  amount=4, newbalanceDest=3, type=2       -> P(delta_dest=0)=0.0814  P(delta_dest=1)=0.2651  P(delta_dest=2)=0.3676  P(delta_dest=3)=0.0758  P(delta_dest=4)=0.2101
+  amount=4, newbalanceDest=3, type=3       -> P(delta_dest=0)=0.2826  P(delta_dest=1)=0.0745  P(delta_dest=2)=0.2051  P(delta_dest=3)=0.1026  P(delta_dest=4)=0.3352
+  amount=4, newbalanceDest=3, type=4       -> P(delta_dest=0)=0.1785  P(delta_dest=1)=0.2106  P(delta_dest=2)=0.3916  P(delta_dest=3)=0.0904  P(delta_dest=4)=0.1289
+  amount=4, newbalanceDest=4, type=0       -> P(delta_dest=0)=0.3781  P(delta_dest=1)=0.0591  P(delta_dest=2)=0.1128  P(delta_dest=3)=0.1509  P(delta_dest=4)=0.2991
+  amount=4, newbalanceDest=4, type=1       -> P(delta_dest=0)=0.0240  P(delta_dest=1)=0.0541  P(delta_dest=2)=0.2469  P(delta_dest=3)=0.4269  P(delta_dest=4)=0.2481
+  amount=4, newbalanceDest=4, type=2       -> P(delta_dest=0)=0.0606  P(delta_dest=1)=0.1207  P(delta_dest=2)=0.3141  P(delta_dest=3)=0.0737  P(delta_dest=4)=0.4309
+  amount=4, newbalanceDest=4, type=3       -> P(delta_dest=0)=0.2451  P(delta_dest=1)=0.0604  P(delta_dest=2)=0.3578  P(delta_dest=3)=0.1897  P(delta_dest=4)=0.1470
+  amount=4, newbalanceDest=4, type=4       -> P(delta_dest=0)=0.1162  P(delta_dest=1)=0.2148  P(delta_dest=2)=0.2366  P(delta_dest=3)=0.3234  P(delta_dest=4)=0.1091
+
+Node: isFraud  (states: 2)
+Parents: amount, newbalanceDest, type
+------------------------------------------------------------------------------
+  amount=0, newbalanceDest=0, type=0       -> P(isFraud=0)=0.9950  P(isFraud=1)=0.0050
+  amount=0, newbalanceDest=0, type=1       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=0, newbalanceDest=0, type=2       -> P(isFraud=0)=0.9985  P(isFraud=1)=0.0015
+  amount=0, newbalanceDest=0, type=3       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=0, newbalanceDest=0, type=4       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=0, newbalanceDest=1, type=0       -> P(isFraud=0)=0.9985  P(isFraud=1)=0.0015
+  amount=0, newbalanceDest=1, type=1       -> P(isFraud=0)=0.9955  P(isFraud=1)=0.0045
+  amount=0, newbalanceDest=1, type=2       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=0, newbalanceDest=1, type=3       -> P(isFraud=0)=0.9847  P(isFraud=1)=0.0153
+  amount=0, newbalanceDest=1, type=4       -> P(isFraud=0)=0.9984  P(isFraud=1)=0.0016
+  amount=0, newbalanceDest=2, type=0       -> P(isFraud=0)=0.9901  P(isFraud=1)=0.0099
+  amount=0, newbalanceDest=2, type=1       -> P(isFraud=0)=0.9976  P(isFraud=1)=0.0024
+  amount=0, newbalanceDest=2, type=2       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=0, newbalanceDest=2, type=3       -> P(isFraud=0)=0.9743  P(isFraud=1)=0.0257
+  amount=0, newbalanceDest=2, type=4       -> P(isFraud=0)=0.9969  P(isFraud=1)=0.0031
+  amount=0, newbalanceDest=3, type=0       -> P(isFraud=0)=0.9998  P(isFraud=1)=0.0002
+  amount=0, newbalanceDest=3, type=1       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=0, newbalanceDest=3, type=2       -> P(isFraud=0)=0.9504  P(isFraud=1)=0.0496
+  amount=0, newbalanceDest=3, type=3       -> P(isFraud=0)=0.9946  P(isFraud=1)=0.0054
+  amount=0, newbalanceDest=3, type=4       -> P(isFraud=0)=0.9972  P(isFraud=1)=0.0028
+  amount=0, newbalanceDest=4, type=0       -> P(isFraud=0)=0.9991  P(isFraud=1)=0.0009
+  amount=0, newbalanceDest=4, type=1       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=0, newbalanceDest=4, type=2       -> P(isFraud=0)=0.9968  P(isFraud=1)=0.0032
+  amount=0, newbalanceDest=4, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=0, newbalanceDest=4, type=4       -> P(isFraud=0)=0.9988  P(isFraud=1)=0.0012
+  amount=1, newbalanceDest=0, type=0       -> P(isFraud=0)=0.9806  P(isFraud=1)=0.0194
+  amount=1, newbalanceDest=0, type=1       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=1, newbalanceDest=0, type=2       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=1, newbalanceDest=0, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=1, newbalanceDest=0, type=4       -> P(isFraud=0)=0.9653  P(isFraud=1)=0.0347
+  amount=1, newbalanceDest=1, type=0       -> P(isFraud=0)=0.9926  P(isFraud=1)=0.0074
+  amount=1, newbalanceDest=1, type=1       -> P(isFraud=0)=0.9972  P(isFraud=1)=0.0028
+  amount=1, newbalanceDest=1, type=2       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=1, newbalanceDest=1, type=3       -> P(isFraud=0)=0.9998  P(isFraud=1)=0.0002
+  amount=1, newbalanceDest=1, type=4       -> P(isFraud=0)=0.9994  P(isFraud=1)=0.0006
+  amount=1, newbalanceDest=2, type=0       -> P(isFraud=0)=0.9960  P(isFraud=1)=0.0040
+  amount=1, newbalanceDest=2, type=1       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=1, newbalanceDest=2, type=2       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=1, newbalanceDest=2, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=1, newbalanceDest=2, type=4       -> P(isFraud=0)=0.9348  P(isFraud=1)=0.0652
+  amount=1, newbalanceDest=3, type=0       -> P(isFraud=0)=0.9747  P(isFraud=1)=0.0253
+  amount=1, newbalanceDest=3, type=1       -> P(isFraud=0)=0.9995  P(isFraud=1)=0.0005
+  amount=1, newbalanceDest=3, type=2       -> P(isFraud=0)=0.9997  P(isFraud=1)=0.0003
+  amount=1, newbalanceDest=3, type=3       -> P(isFraud=0)=0.9797  P(isFraud=1)=0.0203
+  amount=1, newbalanceDest=3, type=4       -> P(isFraud=0)=0.9997  P(isFraud=1)=0.0003
+  amount=1, newbalanceDest=4, type=0       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=1, newbalanceDest=4, type=1       -> P(isFraud=0)=0.9937  P(isFraud=1)=0.0063
+  amount=1, newbalanceDest=4, type=2       -> P(isFraud=0)=0.9998  P(isFraud=1)=0.0002
+  amount=1, newbalanceDest=4, type=3       -> P(isFraud=0)=0.9988  P(isFraud=1)=0.0012
+  amount=1, newbalanceDest=4, type=4       -> P(isFraud=0)=0.9942  P(isFraud=1)=0.0058
+  amount=2, newbalanceDest=0, type=0       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=0, type=1       -> P(isFraud=0)=0.9935  P(isFraud=1)=0.0065
+  amount=2, newbalanceDest=0, type=2       -> P(isFraud=0)=0.9938  P(isFraud=1)=0.0062
+  amount=2, newbalanceDest=0, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=0, type=4       -> P(isFraud=0)=0.9996  P(isFraud=1)=0.0004
+  amount=2, newbalanceDest=1, type=0       -> P(isFraud=0)=0.9936  P(isFraud=1)=0.0064
+  amount=2, newbalanceDest=1, type=1       -> P(isFraud=0)=0.9885  P(isFraud=1)=0.0115
+  amount=2, newbalanceDest=1, type=2       -> P(isFraud=0)=0.9853  P(isFraud=1)=0.0147
+  amount=2, newbalanceDest=1, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=1, type=4       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=2, type=0       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=2, type=1       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=2, type=2       -> P(isFraud=0)=0.9996  P(isFraud=1)=0.0004
+  amount=2, newbalanceDest=2, type=3       -> P(isFraud=0)=0.9905  P(isFraud=1)=0.0095
+  amount=2, newbalanceDest=2, type=4       -> P(isFraud=0)=0.9966  P(isFraud=1)=0.0034
+  amount=2, newbalanceDest=3, type=0       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=2, newbalanceDest=3, type=1       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=3, type=2       -> P(isFraud=0)=0.9996  P(isFraud=1)=0.0004
+  amount=2, newbalanceDest=3, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=3, type=4       -> P(isFraud=0)=0.9992  P(isFraud=1)=0.0008
+  amount=2, newbalanceDest=4, type=0       -> P(isFraud=0)=0.9952  P(isFraud=1)=0.0048
+  amount=2, newbalanceDest=4, type=1       -> P(isFraud=0)=0.9996  P(isFraud=1)=0.0004
+  amount=2, newbalanceDest=4, type=2       -> P(isFraud=0)=0.9997  P(isFraud=1)=0.0003
+  amount=2, newbalanceDest=4, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=2, newbalanceDest=4, type=4       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=3, newbalanceDest=0, type=0       -> P(isFraud=0)=0.9959  P(isFraud=1)=0.0041
+  amount=3, newbalanceDest=0, type=1       -> P(isFraud=0)=0.9987  P(isFraud=1)=0.0013
+  amount=3, newbalanceDest=0, type=2       -> P(isFraud=0)=0.9963  P(isFraud=1)=0.0037
+  amount=3, newbalanceDest=0, type=3       -> P(isFraud=0)=0.9990  P(isFraud=1)=0.0010
+  amount=3, newbalanceDest=0, type=4       -> P(isFraud=0)=0.9918  P(isFraud=1)=0.0082
+  amount=3, newbalanceDest=1, type=0       -> P(isFraud=0)=0.9773  P(isFraud=1)=0.0227
+  amount=3, newbalanceDest=1, type=1       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=3, newbalanceDest=1, type=2       -> P(isFraud=0)=0.9970  P(isFraud=1)=0.0030
+  amount=3, newbalanceDest=1, type=3       -> P(isFraud=0)=0.9943  P(isFraud=1)=0.0057
+  amount=3, newbalanceDest=1, type=4       -> P(isFraud=0)=0.9994  P(isFraud=1)=0.0006
+  amount=3, newbalanceDest=2, type=0       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=3, newbalanceDest=2, type=1       -> P(isFraud=0)=0.9982  P(isFraud=1)=0.0018
+  amount=3, newbalanceDest=2, type=2       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=3, newbalanceDest=2, type=3       -> P(isFraud=0)=0.9987  P(isFraud=1)=0.0013
+  amount=3, newbalanceDest=2, type=4       -> P(isFraud=0)=0.9925  P(isFraud=1)=0.0075
+  amount=3, newbalanceDest=3, type=0       -> P(isFraud=0)=0.9982  P(isFraud=1)=0.0018
+  amount=3, newbalanceDest=3, type=1       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=3, newbalanceDest=3, type=2       -> P(isFraud=0)=0.9936  P(isFraud=1)=0.0064
+  amount=3, newbalanceDest=3, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=3, newbalanceDest=3, type=4       -> P(isFraud=0)=0.9983  P(isFraud=1)=0.0017
+  amount=3, newbalanceDest=4, type=0       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=3, newbalanceDest=4, type=1       -> P(isFraud=0)=0.9994  P(isFraud=1)=0.0006
+  amount=3, newbalanceDest=4, type=2       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=3, newbalanceDest=4, type=3       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=3, newbalanceDest=4, type=4       -> P(isFraud=0)=0.9881  P(isFraud=1)=0.0119
+  amount=4, newbalanceDest=0, type=0       -> P(isFraud=0)=0.9978  P(isFraud=1)=0.0022
+  amount=4, newbalanceDest=0, type=1       -> P(isFraud=0)=0.9996  P(isFraud=1)=0.0004
+  amount=4, newbalanceDest=0, type=2       -> P(isFraud=0)=0.9998  P(isFraud=1)=0.0002
+  amount=4, newbalanceDest=0, type=3       -> P(isFraud=0)=0.9964  P(isFraud=1)=0.0036
+  amount=4, newbalanceDest=0, type=4       -> P(isFraud=0)=0.9981  P(isFraud=1)=0.0019
+  amount=4, newbalanceDest=1, type=0       -> P(isFraud=0)=0.9989  P(isFraud=1)=0.0011
+  amount=4, newbalanceDest=1, type=1       -> P(isFraud=0)=0.9915  P(isFraud=1)=0.0085
+  amount=4, newbalanceDest=1, type=2       -> P(isFraud=0)=0.9966  P(isFraud=1)=0.0034
+  amount=4, newbalanceDest=1, type=3       -> P(isFraud=0)=0.9996  P(isFraud=1)=0.0004
+  amount=4, newbalanceDest=1, type=4       -> P(isFraud=0)=0.9998  P(isFraud=1)=0.0002
+  amount=4, newbalanceDest=2, type=0       -> P(isFraud=0)=0.9908  P(isFraud=1)=0.0092
+  amount=4, newbalanceDest=2, type=1       -> P(isFraud=0)=0.9997  P(isFraud=1)=0.0003
+  amount=4, newbalanceDest=2, type=2       -> P(isFraud=0)=0.9991  P(isFraud=1)=0.0009
+  amount=4, newbalanceDest=2, type=3       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=4, newbalanceDest=2, type=4       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=4, newbalanceDest=3, type=0       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=4, newbalanceDest=3, type=1       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
+  amount=4, newbalanceDest=3, type=2       -> P(isFraud=0)=0.9957  P(isFraud=1)=0.0043
+  amount=4, newbalanceDest=3, type=3       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=4, newbalanceDest=3, type=4       -> P(isFraud=0)=0.9990  P(isFraud=1)=0.0010
+  amount=4, newbalanceDest=4, type=0       -> P(isFraud=0)=0.9912  P(isFraud=1)=0.0088
+  amount=4, newbalanceDest=4, type=1       -> P(isFraud=0)=0.9955  P(isFraud=1)=0.0045
+  amount=4, newbalanceDest=4, type=2       -> P(isFraud=0)=0.9984  P(isFraud=1)=0.0016
+  amount=4, newbalanceDest=4, type=3       -> P(isFraud=0)=0.9999  P(isFraud=1)=0.0001
+  amount=4, newbalanceDest=4, type=4       -> P(isFraud=0)=1.0000  P(isFraud=1)=0.0000
